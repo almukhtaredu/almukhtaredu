@@ -1,37 +1,36 @@
-/* إعدادات الخط والاتجاهات الذكية */
+/* إعدادات الاتجاه المنطقي */
 :root {
-    --main-font: 'Tajawal', sans-serif;
+    --side-gap: 2rem;
 }
 
 body {
-    font-family: var(--main-font);
+    font-family: 'Tajawal', sans-serif;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
     transition: all 0.3s ease;
 }
 
-/* حل مشكلة الاتجاه الجذري: المحاذاة تتبع اتجاه الصفحة آلياً */
+/* حل الاتجاه: نستخدم start و end بدلاً من right و left */
 [dir="rtl"] { text-align: right; }
 [dir="ltr"] { text-align: left; }
 
-/* تنسيق مربع اللوجو الكبير */
+/* اللوجو الكبير والذكي */
 .logo-wrapper {
     position: absolute;
     top: 5px;
     z-index: 1000;
     background: white;
-    padding: 5px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    border: 2px solid #6366f1;
-    width: 160px; /* حجم المربع */
+    width: 160px;
     height: 160px;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* السر: يبدأ من اليمين في العربي واليسار في الإنجليزي تلقائياً */
-    inset-inline-start: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    border: 2px solid #6366f1;
+    /* السر: inset-inline-start تضعه في اليمين بالعربي واليسار بالإنجليزي */
+    inset-inline-start: var(--side-gap) !important;
 }
 
 .logo-wrapper img {
@@ -40,18 +39,32 @@ body {
     object-fit: contain;
 }
 
-/* تنسيق الناف بار لضمان عدم تداخل العناصر */
+/* الناف بار الذكي */
 .nav-container {
     display: flex;
     width: 100%;
     align-items: center;
-    justify-content: flex-end; /* العناصر دائماً في الجهة المقابلة للوجو */
+    /* يضع الروابط دائماً في الجهة المقابلة للوجو */
+    justify-content: flex-end;
+    gap: 2rem;
 }
 
-/* تحسينات لصفحة التواصل */
-.contact-card {
-    transition: transform 0.3s ease;
+/* محاذاة العناصر في الهيدر والفوتر */
+.center-content {
+    text-align: center !important;
 }
-.contact-card:hover {
-    transform: translateY(-5px);
+
+/* كروت التواصل */
+.contact-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    background: #1e293b;
+    color: white;
+    text-decoration: none;
+    transition: background 0.3s;
+    border: 1px solid #334155;
 }
+.contact-btn:hover { background: #4f46e5; }
