@@ -7,32 +7,35 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Tajawal', sans-serif; scroll-behavior: smooth; }
-        /* تحسين حاوية اللوجو لتناسب الحجم الكبير */
+        body { font-family: 'Tajawal', sans-serif; scroll-behavior: smooth; overflow-x: hidden; }
         .logo-wrapper {
             position: absolute; top: 10px; z-index: 100; background: white;
-            padding: 12px; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.12); border: 1px solid #f1f5f9;
+            padding: 5px; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); 
+            border: 1px solid #f1f5f9; width: 130px; height: 130px; 
+            display: flex; align-items: center; justify-content: center; overflow: hidden;
         }
-        [dir="rtl"] .logo-wrapper { right: 2rem; }
-        [dir="ltr"] .logo-wrapper { left: 2rem; }
-        .subject-card { transition: all 0.3s ease; }
-        .subject-card:hover { transform: translateY(-5px); }
+        /* إجبار اللوجو على ملء المربع */
+        .logo-wrapper img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.1); }
+        
+        [dir="rtl"] .logo-wrapper { right: 2rem; left: auto; }
+        [dir="ltr"] .logo-wrapper { left: 2rem; right: auto; }
+        
+        .nav-content { display: flex; width: 100%; align-items: center; justify-content: flex-end; }
+        [dir="ltr"] .nav-content { justify-content: flex-end; }
     </style>
 </head>
 <body class="bg-white">
 
     <nav class="bg-white/95 backdrop-blur-md shadow-sm border-b sticky top-0 z-50 h-24 flex items-center">
-        <div class="container mx-auto px-6 flex justify-between items-center relative">
+        <div class="container mx-auto px-6 relative flex items-center h-full">
             <div class="logo-wrapper">
-                <img src="logo.png" alt="Logo" class="h-24 md:h-32 w-auto object-contain">
+                <img src="logo.png" alt="Logo">
             </div>
-            <div class="flex-1 flex justify-end">
-                <div class="flex items-center gap-6 md:gap-10">
-                    <a href="contact.html" id="ln-contact" class="text-slate-600 hover:text-purple-700 font-black transition text-sm md:text-base">تواصل معنا</a>
-                    <a href="#about" id="ln-about" class="text-slate-600 hover:text-purple-700 font-black transition text-sm md:text-base">تعرف علينا</a>
-                    <div class="border-r pr-6 ml-4">
-                        <button onclick="toggleAppLang()" id="langBtn" class="bg-slate-50 text-purple-700 px-5 py-2 rounded-lg font-bold border border-purple-200 hover:bg-purple-700 hover:text-white transition">English</button>
-                    </div>
+            <div class="nav-content gap-6 md:gap-10">
+                <a href="contact.html" id="ln-contact" class="text-slate-600 hover:text-purple-700 font-black transition text-sm md:text-base">تواصل معنا</a>
+                <a href="#about" id="ln-about" class="text-slate-600 hover:text-purple-700 font-black transition text-sm md:text-base">تعرف علينا</a>
+                <div class="border-s ps-6 border-slate-200">
+                    <button onclick="toggleAppLang()" id="langBtn" class="bg-slate-50 text-purple-700 px-5 py-2 rounded-lg font-bold border border-purple-200 hover:bg-purple-700 hover:text-white transition">English</button>
                 </div>
             </div>
         </div>
@@ -41,16 +44,16 @@
     <header id="about" class="py-32 text-center bg-slate-900 border-b border-slate-800">
         <div class="container mx-auto px-4">
             <h1 class="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight">Almukhtar Edu</h1>
-            <p id="hero-subtitle" class="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed font-light italic">
+            <p id="hero-subtitle" class="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed font-light italic text-center">
                 مؤسسة تعليمية رائدة تهدف إلى تمكين الطلاب من أدوات المنطق الرياضي والتميز التكنولوجي وفق معايير هندسية دقيقة.
             </p>
         </div>
     </header>
 
     <section class="py-24 container mx-auto px-4">
-        <div class="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
-            <div class="bg-white rounded-2xl border border-slate-200 p-8 subject-card shadow-sm">
-                <h3 id="ict-title" class="text-2xl font-bold text-purple-800 mb-8 text-center border-b border-purple-50 pb-4 uppercase">تكنولوجيا المعلومات والاتصالات</h3>
+        <div id="cards-container" class="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+            <div class="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm">
+                <h3 id="ict-title" class="text-2xl font-bold text-purple-800 mb-8 text-center border-b border-purple-50 pb-4">تكنولوجيا المعلومات والاتصالات</h3>
                 <div class="grid gap-3">
                     <div class="p-4 bg-slate-50 rounded-xl text-center font-medium">الصف الرابع الابتدائي</div>
                     <div class="p-4 bg-slate-50 rounded-xl text-center font-medium">الصف الخامس الابتدائي</div>
@@ -59,8 +62,8 @@
                     <div class="p-4 bg-white rounded-xl text-center font-bold text-purple-600 border border-purple-100 shadow-sm">الصف الثاني الإعدادي</div>
                 </div>
             </div>
-            <div class="bg-white rounded-2xl border border-slate-200 p-8 subject-card shadow-sm">
-                <h3 id="math-title" class="text-2xl font-bold text-cyan-800 mb-8 text-center border-b border-cyan-50 pb-4 uppercase">الرياضيات</h3>
+            <div class="bg-white rounded-2xl border border-slate-200 p-8 shadow-sm">
+                <h3 id="math-title" class="text-2xl font-bold text-cyan-800 mb-8 text-center border-b border-cyan-50 pb-4">الرياضيات</h3>
                 <div class="grid gap-3">
                     <div class="p-4 bg-cyan-50/50 rounded-xl text-center font-bold text-cyan-900 border border-cyan-100 shadow-sm">الصف الأول الإعدادي</div>
                     <div class="p-4 bg-slate-50 rounded-xl text-center font-medium text-slate-400 italic">الصف الثاني الإعدادي - قريباً</div>
@@ -70,7 +73,7 @@
         </div>
     </section>
 
-    <footer class="bg-slate-900 py-8 text-center border-t border-slate-800 mt-auto">
+    <footer class="bg-slate-900 py-8 text-center">
         <p id="footer-copy" class="text-slate-400 text-sm tracking-widest font-light uppercase">© 2026 ALMUKHTAR EDU. ALL RIGHTS RESERVED.</p>
     </footer>
 
@@ -80,22 +83,22 @@
             const isAr = html.dir === 'rtl';
             
             if (isAr) {
-                html.dir = 'ltr'; html.lang = 'en';
+                html.dir = 'ltr';
                 document.getElementById('langBtn').innerText = 'عربي';
                 document.getElementById('ln-about').innerText = 'About Us';
                 document.getElementById('ln-contact').innerText = 'Contact';
-                document.getElementById('hero-subtitle').innerText = 'A leading educational institution aimed at empowering students with logical mathematical tools and technological excellence.';
                 document.getElementById('ict-title').innerText = 'ICT';
                 document.getElementById('math-title').innerText = 'Mathematics';
+                document.getElementById('hero-subtitle').innerText = 'A leading educational institution aimed at empowering students with logical mathematical tools and technological excellence.';
                 document.getElementById('footer-copy').innerText = '© 2026 ALMUKHTAR EDU. ALL RIGHTS RESERVED.';
             } else {
-                html.dir = 'rtl'; html.lang = 'ar';
+                html.dir = 'rtl';
                 document.getElementById('langBtn').innerText = 'English';
                 document.getElementById('ln-about').innerText = 'تعرف علينا';
                 document.getElementById('ln-contact').innerText = 'تواصل معنا';
-                document.getElementById('hero-subtitle').innerText = 'مؤسسة تعليمية رائدة تهدف إلى تمكين الطلاب من أدوات المنطق الرياضي والتميز التكنولوجي وفق معايير هندسية دقيقة.';
                 document.getElementById('ict-title').innerText = 'تكنولوجيا المعلومات والاتصالات';
                 document.getElementById('math-title').innerText = 'الرياضيات';
+                document.getElementById('hero-subtitle').innerText = 'مؤسسة تعليمية رائدة تهدف إلى تمكين الطلاب من أدوات المنطق الرياضي والتميز التكنولوجي وفق معايير هندسية دقيقة.';
                 document.getElementById('footer-copy').innerText = '© 2026 ALMUKHTAR EDU. جميع الحقوق محفوظة.';
             }
         }
