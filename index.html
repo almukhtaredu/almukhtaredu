@@ -3,37 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Almukhtar Edu | Math & ICT Hub</title>
-    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Space+Grotesk:wght@300;700&display=swap" rel="stylesheet">
+    <title>Almukhtar Edu | Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <a href="about.html" class="nav-link about">ABOUT US</a>
-    <a href="contact.html" class="nav-link contact">CONTACT US</a>
+    <nav class="top-nav">
+        <a href="about.html" class="corner-link">ABOUT US</a>
+        <a href="contact.html" class="corner-link">CONTACT US</a>
+    </nav>
 
-    <div class="logo-center">
-        <img src="logo.png" alt="Almukhtar Logo" class="main-logo">
+    <div class="center-piece">
+        <img src="logo.png" alt="Almukhtar Logo" class="hero-logo">
     </div>
 
-    <div class="split-container">
-        <section class="side math" onclick="window.location.href='math.html'">
-            <div class="side-text">
+    <main class="main-split">
+        <section class="half math-half" onclick="window.location.href='math.html'">
+            <div class="label-wrapper">
                 <h2>MATH</h2>
-                <p>Logic & Equations</p>
+                <p>Logic & Mastery</p>
             </div>
         </section>
 
-        <section class="side ict" onclick="window.location.href='ict.html'">
-            <div class="side-text">
+        <section class="half ict-half" onclick="window.location.href='ict.html'">
+            <div class="label-wrapper">
                 <h2>ICT</h2>
-                <p>Coding & Future</p>
+                <p>Digital Innovation</p>
             </div>
         </section>
-    </div>
+    </main>
 
-    <footer class="copyrights">
-        © 2026 ALMUKHTAR EDUCATIONAL FOUNDATION | ENG. MUHAMMAD MUKHTAR
+    <footer class="bottom-footer">
+        <p>© 2026 ALMUKHTAR EDUCATIONAL FOUNDATION | ENG. MUHAMMAD MUKHTAR</p>
     </footer>
 
 </body>
