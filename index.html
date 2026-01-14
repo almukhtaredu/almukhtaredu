@@ -53,22 +53,20 @@
     </section>
 
     <footer class="bg-slate-900 py-10 center-content">
-        <p id="footer-copy" class="text-slate-500 font-bold uppercase tracking-widest">© 2026 المختار للتعليم. جميع الحقوق محفوظة.</p>
+        <p id="footer-copy" class="text-slate-500 font-bold uppercase tracking-widest">© 2026 Almukhtar Edu. جميع الحقوق محفوظة.</p>
     </footer>
 
     <script>
         function toggleAppLang() {
             const html = document.getElementById('main-html');
             if (html.dir === 'rtl') {
-                html.dir = 'ltr';
-                html.lang = 'en';
                 document.getElementById('langBtn').innerText = 'عربي';
                 document.getElementById('ln-about').innerText = 'About Us';
                 document.getElementById('ln-contact').innerText = 'Contact';
                 document.getElementById('ict-title').innerText = 'ICT';
                 document.getElementById('math-title').innerText = 'Mathematics';
                 document.getElementById('hero-subtitle').innerText = 'A leading educational institution aimed at empowering students with logical mathematical tools and technological excellence.';
-                document.getElementById('footer-copy').innerText = '© 2026 ALMUKHTAR EDU. ALL RIGHTS RESERVED.';
+                document.getElementById('footer-copy').innerText = '© 2026 Almukhtar Edu. ALL RIGHTS RESERVED.';
                 const ict = ["Grade 4", "Grade 5", "Grade 6", "Prep 1", "Prep 2"];
                 document.querySelectorAll('#ict-list div').forEach((d, i) => d.innerText = ict[i]);
                 const math = ["Prep 1", "Prep 2 - Soon", "Prep 3 - Soon"];
