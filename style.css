@@ -21,14 +21,14 @@ body {
 }
 .corner-link:hover { background: #fff; color: #000; }
 
-/* --- Footer (White & Clear) --- */
+/* --- Footer --- */
 .bottom-footer {
     position: fixed; bottom: 20px; width: 100%; text-align: center;
     color: #ffffff; font-size: 0.7rem; pointer-events: none; z-index: 1000;
     font-weight: 500; opacity: 1;
 }
 
-/* --- Home Page (Index) Styles --- */
+/* --- Home Page Styles --- */
 .center-piece {
     position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
     z-index: 100; pointer-events: none;
@@ -45,50 +45,28 @@ body {
 .math-half h2 { color: var(--math-blue); }
 .ict-half h2 { color: var(--ict-purple); }
 
-/* --- Inner Pages (Contact/About) Styles --- */
+/* --- Inner Pages Styles --- */
 .inner-page-padding { overflow-y: auto; padding: 120px 5% 100px; }
-
 .side-logo-top { position: fixed; top: 20px; right: 40px; z-index: 1000; }
 .side-logo-top img { width: 180px; filter: drop-shadow(0 0 15px rgba(255,255,255,0.1)); }
 
 .giant-title { font-family: 'Syncopate', sans-serif; font-size: 4rem; margin-bottom: 40px; }
 .giant-title span { color: var(--math-blue); -webkit-text-stroke: 1px #fff; color: transparent; }
 
-/* About Page Specific */
-.bio-box {
-    transition: 0.4s ease;
-    cursor: default;
-    margin-bottom: 20px;
-}
-.bio-box:hover {
-    background: #111 !important;
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-}
+.bio-box { transition: 0.4s ease; cursor: default; margin-bottom: 20px; }
+.bio-box:hover { background: #111 !important; transform: translateY(-5px); }
 
-/* Contact Page Specific */
 .contact-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 40px; }
-.neon-card {
-    display: block; background: #0a0a0a; border: 1px solid #222;
-    padding: 25px; margin-bottom: 15px; text-decoration: none; color: #fff; transition: 0.3s;
-}
+.neon-card { display: block; background: #0a0a0a; border: 1px solid #222; padding: 25px; margin-bottom: 15px; text-decoration: none; color: #fff; transition: 0.3s; }
 .neon-card:hover { border-color: var(--math-blue); transform: translateX(10px); }
-.neon-card small { color: #666; letter-spacing: 2px; }
 
-.cyber-form input, .cyber-form textarea {
-    width: 100%; background: none; border: none; border-bottom: 2px solid #222;
-    padding: 15px; color: #fff; margin-bottom: 20px; outline: none; font-size: 1.1rem;
-}
+.cyber-form input, .cyber-form textarea { width: 100%; background: none; border: none; border-bottom: 2px solid #222; padding: 15px; color: #fff; margin-bottom: 20px; outline: none; }
 .cyber-form input:focus { border-color: var(--ict-purple); }
-.glitch-btn {
-    width: 100%; padding: 20px; background: #fff; border: none;
-    font-family: 'Syncopate', sans-serif; font-weight: 900; cursor: pointer; transition: 0.3s;
-}
+.glitch-btn { width: 100%; padding: 20px; background: #fff; border: none; font-family: 'Syncopate', sans-serif; font-weight: 900; cursor: pointer; transition: 0.3s; }
 .glitch-btn:hover { background: var(--ict-purple); color: #fff; letter-spacing: 5px; }
 
 @media (max-width: 768px) {
-    .main-split, .contact-grid { flex-direction: column; grid-template-columns: 1fr; }
+    .main-split, .contact-grid { flex-direction: column; }
     .hero-logo { width: 160px; }
     .giant-title { font-size: 2.5rem; }
-    .side-logo-top img { width: 100px; }
 }
