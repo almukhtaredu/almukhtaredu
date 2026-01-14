@@ -1,0 +1,57 @@
+/* إعدادات الخط والاتجاهات الذكية */
+:root {
+    --main-font: 'Tajawal', sans-serif;
+}
+
+body {
+    font-family: var(--main-font);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    transition: all 0.3s ease;
+}
+
+/* حل مشكلة الاتجاه الجذري: المحاذاة تتبع اتجاه الصفحة آلياً */
+[dir="rtl"] { text-align: right; }
+[dir="ltr"] { text-align: left; }
+
+/* تنسيق مربع اللوجو الكبير */
+.logo-wrapper {
+    position: absolute;
+    top: 5px;
+    z-index: 1000;
+    background: white;
+    padding: 5px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    border: 2px solid #6366f1;
+    width: 160px; /* حجم المربع */
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* السر: يبدأ من اليمين في العربي واليسار في الإنجليزي تلقائياً */
+    inset-inline-start: 2rem;
+}
+
+.logo-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* تنسيق الناف بار لضمان عدم تداخل العناصر */
+.nav-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end; /* العناصر دائماً في الجهة المقابلة للوجو */
+}
+
+/* تحسينات لصفحة التواصل */
+.contact-card {
+    transition: transform 0.3s ease;
+}
+.contact-card:hover {
+    transform: translateY(-5px);
+}
