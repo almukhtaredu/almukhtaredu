@@ -1,39 +1,35 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl" id="main-html">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Almukhtar Edu | الرئيسية</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <style>body { font-family: 'Tajawal', sans-serif; }</style>
 </head>
 <body>
     <nav class="bg-white shadow-md sticky top-0 z-50 h-24 flex items-center">
-        <div class="container mx-auto px-6 relative flex items-center h-full">
-            <div class="logo-wrapper">
-                <img src="logo.png" alt="Logo">
-            </div>
-            <div class="nav-container">
-                <a href="contact.html" id="ln-contact" class="text-slate-800 font-black hover:text-indigo-600 transition">تواصل معنا</a>
-                <a href="#about" id="ln-about" class="text-slate-800 font-black hover:text-indigo-600 transition">تعرف علينا</a>
-                <button onclick="toggleAppLang()" id="langBtn" class="bg-indigo-600 text-white px-6 py-2 rounded-full font-bold">English</button>
+        <div class="container mx-auto px-6 flex items-center justify-between">
+            <img src="logo.png" alt="Logo" class="w-24 h-24 object-contain">
+            <div class="flex gap-6 items-center">
+                <a href="contact.html" class="text-slate-800 font-black hover:text-indigo-600">تواصل معنا</a>
+                <a href="index.html" class="text-slate-800 font-black hover:text-indigo-600">الرئيسية</a>
+                <a href="index-en.html" class="bg-indigo-600 text-white px-6 py-2 rounded-full font-bold">English</a>
             </div>
         </div>
     </nav>
 
-    <header id="about" class="py-32 bg-slate-900 text-white center-content">
-        <div class="container mx-auto px-4">
-            <h1 class="text-5xl md:text-7xl font-black mb-6">Almukhtar Edu</h1>
-            <p id="hero-subtitle" class="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto italic">مؤسسة تعليمية رائدة تهدف إلى تمكين الطلاب من أدوات المنطق الرياضي والتميز التكنولوجي وفق معايير هندسية دقيقة.</p>
-        </div>
+    <header class="py-32 bg-slate-900 text-white text-center">
+        <h1 class="text-5xl md:text-7xl font-black mb-6">Almukhtar Edu</h1>
+        <p class="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto italic">مؤسسة تعليمية رائدة تهدف إلى تمكين الطلاب من أدوات المنطق الرياضي والتميز التكنولوجي وفق معايير هندسية دقيقة.</p>
     </header>
 
     <section class="py-20 container mx-auto px-4">
         <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-            <div class="bg-white rounded-3xl border-2 border-slate-100 p-10 shadow-xl center-content">
-                <h3 id="ict-title" class="text-3xl font-black text-indigo-900 mb-8 border-b-4 border-indigo-50 pb-4">تكنولوجيا المعلومات والاتصالات</h3>
-                <div id="ict-list" class="space-y-4 font-bold text-lg text-slate-700">
+            <div class="bg-white rounded-3xl border-2 border-slate-100 p-10 shadow-xl text-center">
+                <h3 class="text-3xl font-black text-indigo-900 mb-8 border-b-4 border-indigo-50 pb-4">تكنولوجيا المعلومات والاتصالات</h3>
+                <div class="space-y-4 font-bold text-lg text-slate-700">
                     <div class="p-4 bg-slate-50 rounded-xl">الصف الرابع الابتدائي</div>
                     <div class="p-4 bg-slate-50 rounded-xl">الصف الخامس الابتدائي</div>
                     <div class="p-4 bg-slate-50 rounded-xl">الصف السادس الابتدائي</div>
@@ -41,40 +37,19 @@
                     <div class="p-4 bg-indigo-50 text-indigo-700 rounded-xl border border-indigo-100">الصف الثاني الإعدادي</div>
                 </div>
             </div>
-            <div class="bg-white rounded-3xl border-2 border-slate-100 p-10 shadow-xl center-content">
-                <h3 id="math-title" class="text-3xl font-black text-cyan-900 mb-8 border-b-4 border-cyan-50 pb-4">الرياضيات</h3>
-                <div id="math-list" class="space-y-4 font-bold text-lg text-slate-700">
+            <div class="bg-white rounded-3xl border-2 border-slate-100 p-10 shadow-xl text-center">
+                <h3 class="text-3xl font-black text-cyan-900 mb-8 border-b-4 border-cyan-50 pb-4">الرياضيات</h3>
+                <div class="space-y-4 font-bold text-lg text-slate-700">
                     <div class="p-4 bg-cyan-50 text-cyan-700 rounded-xl border border-cyan-100">الصف الأول الإعدادي</div>
-                    <div class="p-4 bg-slate-50 text-slate-400 rounded-xl italic font-normal">الصف الثاني الإعدادي - قريباً</div>
-                    <div class="p-4 bg-slate-50 text-slate-400 rounded-xl italic font-normal">الصف الثالث الإعدادي - قريباً</div>
+                    <div class="p-4 bg-slate-50 text-slate-400 rounded-xl italic">الصف الثاني الإعدادي - قريباً</div>
+                    <div class="p-4 bg-slate-50 text-slate-400 rounded-xl italic">الصف الثالث الإعدادي - قريباً</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-slate-900 py-10 center-content">
-        <p id="footer-copy" class="text-slate-500 font-bold uppercase tracking-widest">© 2026 Almukhtar Edu. جميع الحقوق محفوظة.</p>
+    <footer class="bg-slate-900 py-10 text-center">
+        <p class="text-slate-500 font-bold">© 2026 Almukhtar Edu. جميع الحقوق محفوظة.</p>
     </footer>
-
-    <script>
-        function toggleAppLang() {
-            const html = document.getElementById('main-html');
-            if (html.dir === 'rtl') {
-                document.getElementById('langBtn').innerText = 'عربي';
-                document.getElementById('ln-about').innerText = 'About Us';
-                document.getElementById('ln-contact').innerText = 'Contact';
-                document.getElementById('ict-title').innerText = 'ICT';
-                document.getElementById('math-title').innerText = 'Mathematics';
-                document.getElementById('hero-subtitle').innerText = 'A leading educational institution aimed at empowering students with logical mathematical tools and technological excellence.';
-                document.getElementById('footer-copy').innerText = '© 2026 Almukhtar Edu. ALL RIGHTS RESERVED.';
-                const ict = ["Grade 4", "Grade 5", "Grade 6", "Prep 1", "Prep 2"];
-                document.querySelectorAll('#ict-list div').forEach((d, i) => d.innerText = ict[i]);
-                const math = ["Prep 1", "Prep 2 - Soon", "Prep 3 - Soon"];
-                document.querySelectorAll('#math-list div').forEach((d, i) => d.innerText = math[i]);
-            } else {
-                location.reload();
-            }
-        }
-    </script>
 </body>
 </html>
