@@ -1,73 +1,115 @@
-/* إعدادات الاتجاه المنطقي */
 :root {
-    --side-gap: 2rem;
+    --primary-color: #7b4397; /* بنفسجي اللوجو */
+    --accent-color: #4facfe;  /* أزرق اللوجو */
+    --text-white: #ffffff;
 }
 
-body {
-    font-family: 'Tajawal', sans-serif;
+body, html {
+    margin: 0; padding: 0;
+    height: 100%; width: 100%;
+    font-family: 'Space Grotesk', sans-serif;
+    background: #000;
+    color: var(--text-white);
+    overflow: hidden;
+}
+
+/* تقسيم الشاشة */
+.split-wrapper {
+    display: flex;
+    height: 100vh;
+}
+
+.side {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.side:hover { flex: 1.4; }
+
+/* ألوان الجهات */
+.math { background: linear-gradient(to right, #000, #1a1a2e); }
+.ict { background: linear-gradient(to left, #000, #2e1a2e); }
+
+.side-content {
+    z-index: 10;
+    text-align: center;
+}
+
+.side h2 {
+    font-family: 'Syncopate', sans-serif;
+    font-size: 5vw;
+    letter-spacing: 10px;
     margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    transition: all 0.3s ease;
 }
 
-/* حل الاتجاه: نستخدم start و end بدلاً من right و left */
-[dir="rtl"] { text-align: right; }
-[dir="ltr"] { text-align: left; }
-
-/* اللوجو الكبير والذكي */
-.logo-wrapper {
+/* اللوجو والنافار في المنتصف */
+.central-axis {
     position: absolute;
-    top: 5px;
-    z-index: 1000;
-    background: white;
-    width: 180px;
-    height: 180px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    inset-inline-start: var(--side-gap) !important;
-}
-
-.logo-wrapper {
-    position: absolute;
-    top: 5px;
-    z-index: 1000;
-    width: 180px;
-    height: 180px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    inset-inline-start: var(--side-gap) !important;
-}
-
-/* الناف بار الذكي */
-.nav-container {
-    display: flex;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
     width: 100%;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 2rem;
 }
 
-/* محاذاة العناصر في الهيدر والفوتر */
-.center-content {
-    text-align: center !important;
-}
-
-/* كروت التواصل */
-.contact-card {
+.main-nav {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding: 1.5rem;
-    border-radius: 1rem;
-    background: #1e293b;
+    gap: 150px; /* مسافة للوجو في النص */
+}
+
+.main-nav a {
     color: white;
     text-decoration: none;
-    transition: background 0.3s;
-    border: 1px solid #334155;
+    font-weight: bold;
+    letter-spacing: 3px;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s;
 }
-.contact-card:hover { background: #4f46e5; }
+
+.main-nav a:hover {
+    border-color: var(--accent-color);
+    text-shadow: 0 0 10px var(--accent-color);
+}
+
+.logo-wrapper {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 50%;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.floating-logo {
+    width: 180px; /* حجم اللوجو */
+    filter: drop-shadow(0 0 20px var(--primary-color));
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+/* خلفية نصية ضخمة */
+.bg-label {
+    position: absolute;
+    font-size: 15vw;
+    font-weight: 900;
+    opacity: 0.03;
+    pointer-events: none;
+}
+
+.footer {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #555;
+}
