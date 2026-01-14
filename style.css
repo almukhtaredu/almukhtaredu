@@ -1,125 +1,74 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+    --math-blue: #4facfe;
+    --ict-purple: #7b4397;
+    --bg-dark: #000000;
 }
 
-body, html {
-    height: 100%;
-    width: 100%;
-    background: #000;
-    font-family: 'Space Grotesk', sans-serif;
-    overflow: hidden; /* يمنع أي سكرول مزعج */
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-/* --- اللوجو في المركز تماماً --- */
-.center-piece {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 100; /* أعلى من كل شيء */
-    pointer-events: none; /* يسمح بالضغط على الأزرار خلف اللوجو */
-}
-
-.hero-logo {
-    width: 240px; /* حجم معقول جداً */
-    display: block;
-}
-
-/* --- الروابط في الأركان --- */
-.top-nav {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 30px;
-    z-index: 150;
-}
-
-.corner-link {
+body {
+    background: var(--bg-dark);
     color: #fff;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 0.8rem;
-    letter-spacing: 2px;
-    border: 1px solid rgba(255,255,255,0.2);
-    padding: 10px 20px;
-    background: rgba(0,0,0,0.5);
-    transition: 0.3s;
+    font-family: 'Space Grotesk', sans-serif;
+    overflow-x: hidden;
 }
 
-.corner-link:hover {
-    background: #fff;
-    color: #000;
+/* --- Shared Elements --- */
+.corner-link {
+    color: #fff; text-decoration: none; font-weight: 700; font-size: 0.8rem;
+    letter-spacing: 2px; border: 1px solid rgba(255,255,255,0.2);
+    padding: 10px 20px; background: rgba(0,0,0,0.5); transition: 0.3s;
+}
+.corner-link:hover { background: #fff; color: #000; }
+
+.bottom-footer {
+    position: fixed; bottom: 20px; width: 100%; text-align: center;
+    color: #444; font-size: 0.7rem; pointer-events: none;
 }
 
-/* --- تقسيم الشاشة --- */
-.main-split {
-    display: flex;
-    height: 100vh;
-    width: 100vw;
+/* --- Index Page Styles --- */
+.center-piece {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    z-index: 100; pointer-events: none;
 }
+.hero-logo { width: 240px; }
 
-.half {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.5s ease;
-    position: relative;
-}
-
-/* تأثير التوسع عند الوقوف بالماوس */
-.half:hover {
-    flex: 1.2;
-}
-
+.main-split { display: flex; height: 100vh; }
+.half { flex: 1; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: 0.5s; }
+.half:hover { flex: 1.2; }
 .math-half { background: #080808; border-right: 1px solid #111; }
 .ict-half { background: #0c0c0c; }
 
-/* --- نصوص المواد --- */
-.label-wrapper {
-    text-align: center;
+.label-wrapper h2 { font-family: 'Syncopate', sans-serif; font-size: 4vw; letter-spacing: 10px; }
+.math-half h2 { color: var(--math-blue); }
+.ict-half h2 { color: var(--ict-purple); }
+
+/* --- Contact Page Styles --- */
+.contact-page-bg { overflow-y: auto; padding: 100px 5%; }
+.giant-title { font-family: 'Syncopate', sans-serif; font-size: 4rem; margin-bottom: 40px; }
+.giant-title span { color: var(--math-blue); -webkit-text-stroke: 1px #fff; color: transparent; }
+
+.contact-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 40px; }
+.neon-card {
+    display: block; background: #0a0a0a; border: 1px solid #222;
+    padding: 25px; margin-bottom: 15px; text-decoration: none; color: #fff; transition: 0.3s;
 }
+.neon-card:hover { border-color: var(--math-blue); transform: translateX(10px); }
+.neon-card small { color: #666; letter-spacing: 2px; }
 
-.label-wrapper h2 {
-    font-family: 'Syncopate', sans-serif;
-    font-size: 4vw;
-    letter-spacing: 12px;
-    margin-bottom: 10px;
+.cyber-form input, .cyber-form textarea {
+    width: 100%; background: none; border: none; border-bottom: 2px solid #222;
+    padding: 15px; color: #fff; margin-bottom: 20px; outline: none; font-size: 1.1rem;
 }
-
-.math-half h2 { color: #4facfe; } /* أزرق الماث */
-.ict-half h2 { color: #7b4397; }  /* بنفسجي الـ ICT */
-
-.label-wrapper p {
-    color: #666;
-    font-size: 0.9rem;
-    letter-spacing: 4px;
-    text-transform: uppercase;
+.cyber-form input:focus { border-color: var(--ict-purple); }
+.glitch-btn {
+    width: 100%; padding: 20px; background: #fff; border: none;
+    font-family: 'Syncopate', sans-serif; font-weight: 900; cursor: pointer; transition: 0.3s;
 }
+.glitch-btn:hover { background: var(--ict-purple); color: #fff; letter-spacing: 5px; }
 
-/* --- حقوق النشر --- */
-.bottom-footer {
-    position: absolute;
-    bottom: 25px;
-    width: 100%;
-    text-align: center;
-    z-index: 150;
-}
-
-.bottom-footer p {
-    color: #444;
-    font-size: 0.7rem;
-    letter-spacing: 1px;
-}
-
-/* للموبايل: الصفحة بتتقسم فوق وتحت بدل يمين وشمال */
 @media (max-width: 768px) {
-    .main-split { flex-direction: column; }
+    .main-split, .contact-grid { flex-direction: column; grid-template-columns: 1fr; }
     .hero-logo { width: 160px; }
-    .label-wrapper h2 { font-size: 10vw; }
+    .giant-title { font-size: 2.5rem; }
 }
