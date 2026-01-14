@@ -21,15 +21,13 @@ body {
     top: 5px;
     z-index: 1000;
     background: white;
-    width: 160px;
-    height: 160px;
+    width: 180px;
+    height: 180px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    border: 2px solid #6366f1;
-    /* السر: inset-inline-start تضعه في اليمين بالعربي واليسار بالإنجليزي */
     inset-inline-start: var(--side-gap) !important;
 }
 
@@ -44,7 +42,6 @@ body {
     display: flex;
     width: 100%;
     align-items: center;
-    /* يضع الروابط دائماً في الجهة المقابلة للوجو */
     justify-content: flex-end;
     gap: 2rem;
 }
@@ -55,7 +52,7 @@ body {
 }
 
 /* كروت التواصل */
-.contact-btn {
+.contact-card {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -67,4 +64,4 @@ body {
     transition: background 0.3s;
     border: 1px solid #334155;
 }
-.contact-btn:hover { background: #4f46e5; }
+.contact-card:hover { background: #4f46e5; }
