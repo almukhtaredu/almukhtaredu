@@ -53,7 +53,7 @@
     </section>
 
     <footer class="bg-slate-900 py-10 center-content">
-        <p id="footer-copy" class="text-slate-500 font-bold uppercase tracking-widest">© 2026 ALMUKHTAR EDU. ALL RIGHTS RESERVED.</p>
+        <p id="footer-copy" class="text-slate-500 font-bold uppercase tracking-widest">© 2026 المختار للتعليم. جميع الحقوق محفوظة.</p>
     </footer>
 
     <script>
@@ -61,6 +61,7 @@
             const html = document.getElementById('main-html');
             if (html.dir === 'rtl') {
                 html.dir = 'ltr';
+                html.lang = 'en';
                 document.getElementById('langBtn').innerText = 'عربي';
                 document.getElementById('ln-about').innerText = 'About Us';
                 document.getElementById('ln-contact').innerText = 'Contact';
