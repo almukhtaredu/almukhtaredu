@@ -7,82 +7,72 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Tajawal', sans-serif; display: flex; flex-direction: column; min-height: 100vh; }
+        body { font-family: 'Tajawal', sans-serif; display: flex; flex-direction: column; min-height: 100vh; overflow-x: hidden; }
         .logo-wrapper {
             position: absolute; top: 10px; z-index: 100; background: white;
-            padding: 12px; border-radius: 15px; box-shadow: 0 8px 25px rgba(0,0,0,0.12); border: 1px solid #f1f5f9;
+            padding: 5px; border-radius: 12px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); 
+            border: 1px solid #f1f5f9; width: 130px; height: 130px; 
+            display: flex; align-items: center; justify-content: center; overflow: hidden;
         }
-        [dir="rtl"] .logo-wrapper { right: 2rem; }
-        [dir="ltr"] .logo-wrapper { left: 2rem; }
+        .logo-wrapper img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.1); }
+        
+        [dir="rtl"] .logo-wrapper { right: 2rem; left: auto; }
+        [dir="ltr"] .logo-wrapper { left: 2rem; right: auto; }
+        
+        .nav-content { display: flex; width: 100%; align-items: center; justify-content: flex-end; }
     </style>
 </head>
 <body class="bg-slate-50">
 
     <nav class="bg-white/95 backdrop-blur-md shadow-sm border-b sticky top-0 z-50 h-24 flex items-center">
-        <div class="container mx-auto px-6 flex justify-between items-center relative">
+        <div class="container mx-auto px-6 relative flex items-center h-full">
             <div class="logo-wrapper">
-                <img src="logo.png" alt="Logo" class="h-24 md:h-32 w-auto object-contain">
+                <img src="logo.png" alt="Logo">
             </div>
-            <div class="flex-1 flex justify-end">
-                <div class="flex items-center gap-6 md:gap-10">
-                    <a href="index.html#about" id="ln-about" class="text-slate-600 hover:text-purple-700 font-black transition">تعرف علينا</a>
-                    <a href="index.html" id="ln-home" class="text-slate-600 hover:text-purple-700 font-black transition">الرئيسية</a>
-                    <div class="border-r pr-6 ml-4">
-                        <button onclick="toggleAppLang()" id="langBtn" class="bg-slate-50 text-purple-700 px-5 py-2 rounded-lg font-bold border border-purple-200 hover:bg-purple-700 hover:text-white transition">English</button>
-                    </div>
+            <div class="nav-content gap-6 md:gap-10">
+                <a href="index.html" id="ln-home" class="text-slate-600 hover:text-purple-700 font-black transition text-sm md:text-base">الرئيسية</a>
+                <div class="border-s ps-6 border-slate-200">
+                    <button onclick="toggleAppLang()" id="langBtn" class="bg-slate-50 text-purple-700 px-5 py-2 rounded-lg font-bold border border-purple-200 hover:bg-purple-700 hover:text-white transition">English</button>
                 </div>
             </div>
         </div>
     </nav>
 
-    <header class="py-20 text-center bg-slate-900 text-white border-b border-slate-800">
-        <h1 id="page-title" class="text-3xl md:text-4xl font-black mb-4">تواصل معنا</h1>
-        <p id="page-subtitle" class="text-slate-400 font-light max-w-xl mx-auto px-4 italic leading-relaxed">يسعدنا استقبال استفساراتكم واقتراحاتكم عبر القنوات التالية</p>
+    <header class="py-20 text-center bg-slate-900 text-white">
+        <h1 id="page-title" class="text-3xl md:text-4xl font-black mb-4 text-center">تواصل معنا</h1>
+        <p id="page-subtitle" class="text-slate-400 font-light max-w-xl mx-auto px-4 italic text-center">يسعدنا استقبال استفساراتكم واقتراحاتكم عبر القنوات التالية</p>
     </header>
 
     <main class="flex-grow py-12 container mx-auto px-4 -mt-8">
-        <div class="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl border border-slate-100 overflow-hidden">
+        <div class="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-100">
             <div class="grid md:grid-cols-5">
                 <div class="md:col-span-2 bg-slate-900 p-10 text-white flex flex-col justify-center">
                     <h3 id="info-title" class="text-xl font-bold mb-8 border-b border-slate-700 pb-4">اتصال سريع</h3>
                     <div class="space-y-6">
-                        <a href="tel:01200109995" class="flex items-center justify-between bg-slate-800 p-4 rounded-2xl hover:bg-purple-700 transition-all group">
-                            <div class="flex items-center gap-3"><span class="text-xl">📞</span><span class="font-bold text-sm">اتصال هاتفـي</span></div>
-                            <span class="text-xs text-slate-400 group-hover:text-white italic">اتصل الآن</span>
+                        <a href="tel:01200109995" class="flex items-center justify-between bg-slate-800 p-4 rounded-2xl hover:bg-purple-700 transition-all">
+                            <span class="font-bold text-sm">📞 اتصال</span>
+                            <span class="text-xs text-slate-400">Call Now</span>
                         </a>
-                        <a href="https://wa.me/201200109995" target="_blank" class="flex items-center justify-between bg-slate-800 p-4 rounded-2xl hover:bg-green-600 transition-all group">
-                            <div class="flex items-center gap-3"><span class="text-xl">💬</span><span class="font-bold text-sm">محادثة واتساب</span></div>
-                            <span class="text-xs text-slate-400 group-hover:text-white italic">أرسل رسالة</span>
-                        </a>
-                        <a href="mailto:almukhtaredu@gmail.com" class="flex items-center justify-between bg-slate-800 p-4 rounded-2xl hover:bg-blue-600 transition-all group">
-                            <div class="flex items-center gap-3"><span class="text-xl">✉️</span><span class="font-bold text-sm">راسلنا عبر البريد</span></div>
-                            <span class="text-xs text-slate-400 group-hover:text-white italic">فتح التطبيق</span>
+                        <a href="https://wa.me/201200109995" target="_blank" class="flex items-center justify-between bg-slate-800 p-4 rounded-2xl hover:bg-green-600 transition-all">
+                            <span class="font-bold text-sm">💬 واتساب</span>
+                            <span class="text-xs text-slate-400">WhatsApp</span>
                         </a>
                     </div>
                 </div>
                 <div class="md:col-span-3 p-10">
-                    <form action="#" class="space-y-5">
-                        <div>
-                            <label id="lbl-name" class="block text-sm font-bold text-slate-700 mb-2">الاسم</label>
-                            <input type="text" placeholder="اسمك الكريم" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-purple-500 outline-none transition">
-                        </div>
-                        <div>
-                            <label id="lbl-email" class="block text-sm font-bold text-slate-700 mb-2">رقم الهاتف أو الإيميل</label>
-                            <input type="text" placeholder="لنتمكن من الرد عليك" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-purple-500 outline-none transition">
-                        </div>
-                        <div>
-                            <label id="lbl-msg" class="block text-sm font-bold text-slate-700 mb-2">رسالتك</label>
-                            <textarea rows="4" placeholder="اكتب استفسارك أو اقتراحك هنا..." class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-purple-500 outline-none transition"></textarea>
-                        </div>
-                        <button id="btn-send" class="w-full bg-purple-700 text-white font-black py-4 rounded-xl hover:bg-slate-900 transition-all shadow-lg">إرسال الرسالة</button>
+                    <form class="space-y-5">
+                        <input type="text" id="ipt-name" placeholder="الاسم" class="w-full bg-slate-50 border p-3 rounded-xl outline-none focus:ring-2 focus:ring-purple-500">
+                        <input type="text" id="ipt-contact" placeholder="رقم الهاتف" class="w-full bg-slate-50 border p-3 rounded-xl outline-none focus:ring-2 focus:ring-purple-500">
+                        <textarea id="ipt-msg" rows="4" placeholder="رسالتك" class="w-full bg-slate-50 border p-3 rounded-xl outline-none focus:ring-2 focus:ring-purple-500"></textarea>
+                        <button id="btn-send" class="w-full bg-purple-700 text-white font-black py-4 rounded-xl">إرسال</button>
                     </form>
                 </div>
             </div>
         </div>
     </main>
 
-    <footer class="bg-slate-900 py-8 text-center border-t border-slate-800">
-        <p id="footer-copy" class="text-slate-400 text-sm tracking-widest font-light uppercase">© 2026 ALMUKHTAR EDU. ALL RIGHTS RESERVED.</p>
+    <footer class="bg-slate-900 py-8 text-center">
+        <p id="footer-copy" class="text-slate-400 text-sm uppercase tracking-widest">© 2026 ALMUKHTAR EDU. ALL RIGHTS RESERVED.</p>
     </footer>
 
     <script>
@@ -91,30 +81,28 @@
             const isAr = html.dir === 'rtl';
             
             if (isAr) {
-                html.dir = 'ltr'; html.lang = 'en';
+                html.dir = 'ltr';
                 document.getElementById('langBtn').innerText = 'عربي';
                 document.getElementById('page-title').innerText = 'Contact Us';
-                document.getElementById('page-subtitle').innerText = 'We are pleased to receive your inquiries and suggestions through the following channels';
+                document.getElementById('page-subtitle').innerText = 'We welcome your inquiries and suggestions';
                 document.getElementById('info-title').innerText = 'Quick Contact';
-                document.getElementById('btn-send').innerText = 'Send Message';
-                document.getElementById('ln-about').innerText = 'About Us';
+                document.getElementById('btn-send').innerText = 'Send';
                 document.getElementById('ln-home').innerText = 'Home';
-                document.getElementById('lbl-name').innerText = 'Name';
-                document.getElementById('lbl-email').innerText = 'Phone or Email';
-                document.getElementById('lbl-msg').innerText = 'Message';
+                document.getElementById('ipt-name').placeholder = 'Name';
+                document.getElementById('ipt-contact').placeholder = 'Contact Info';
+                document.getElementById('ipt-msg').placeholder = 'Message';
                 document.getElementById('footer-copy').innerText = '© 2026 ALMUKHTAR EDU. ALL RIGHTS RESERVED.';
             } else {
-                html.dir = 'rtl'; html.lang = 'ar';
+                html.dir = 'rtl';
                 document.getElementById('langBtn').innerText = 'English';
                 document.getElementById('page-title').innerText = 'تواصل معنا';
                 document.getElementById('page-subtitle').innerText = 'يسعدنا استقبال استفساراتكم واقتراحاتكم عبر القنوات التالية';
                 document.getElementById('info-title').innerText = 'اتصال سريع';
-                document.getElementById('btn-send').innerText = 'إرسال الرسالة';
-                document.getElementById('ln-about').innerText = 'تعرف علينا';
+                document.getElementById('btn-send').innerText = 'إرسال';
                 document.getElementById('ln-home').innerText = 'الرئيسية';
-                document.getElementById('lbl-name').innerText = 'الاسم';
-                document.getElementById('lbl-email').innerText = 'رقم الهاتف أو الإيميل';
-                document.getElementById('lbl-msg').innerText = 'الرسالة';
+                document.getElementById('ipt-name').placeholder = 'الاسم';
+                document.getElementById('ipt-contact').placeholder = 'رقم الهاتف';
+                document.getElementById('ipt-msg').placeholder = 'رسالتك';
                 document.getElementById('footer-copy').innerText = '© 2026 ALMUKHTAR EDU. جميع الحقوق محفوظة.';
             }
         }
