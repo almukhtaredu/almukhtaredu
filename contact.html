@@ -6,27 +6,16 @@
     <title>تواصل معنا | Almukhtar Edu</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Tajawal', sans-serif; min-height: 100vh; display: flex; flex-direction: column; }
-        .logo-wrapper {
-            position: absolute; top: 5px; z-index: 1000; background: white;
-            padding: 5px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); 
-            border: 2px solid #6366f1; width: 160px; height: 160px; 
-            display: flex; align-items: center; justify-content: center;
-        }
-        .logo-wrapper img { width: 100%; height: 100%; object-fit: contain; }
-        [dir="rtl"] .logo-wrapper { right: 2rem; left: auto; }
-        [dir="ltr"] .logo-wrapper { left: 2rem; right: auto; }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-slate-50">
 
     <nav class="bg-white shadow-md sticky top-0 z-50 h-24 flex items-center">
         <div class="container mx-auto px-6 relative flex items-center h-full">
-            <div class="logo-wrapper" id="logo-box">
+            <div class="logo-wrapper">
                 <img src="logo.png" alt="Logo">
             </div>
-            <div class="flex w-full items-center justify-end gap-6 md:gap-10">
+            <div class="nav-container gap-6 md:gap-10">
                 <a href="index.html" id="ln-home" class="text-slate-800 hover:text-indigo-600 font-black transition text-lg">الرئيسية</a>
                 <button onclick="toggleAppLang()" id="langBtn" class="bg-indigo-600 text-white px-6 py-2 rounded-full font-bold shadow-lg">English</button>
             </div>
@@ -35,7 +24,7 @@
 
     <header class="py-20 text-center bg-slate-900 text-white">
         <h1 id="page-title" class="text-4xl font-black mb-4">تواصل معنا</h1>
-        <p id="page-subtitle" class="text-slate-400 italic px-4">يسعدنا استقبال استفساراتكم واقتراحاتكم عبر القنوات التالية</p>
+        <p id="page-subtitle" class="text-slate-400 italic">يسعدنا استقبال استفساراتكم واقتراحاتكم عبر القنوات التالية</p>
     </header>
 
     <main class="flex-grow py-12 container mx-auto px-4 -mt-12">
@@ -44,16 +33,16 @@
                 <div class="md:col-span-2 bg-slate-900 p-10 text-white flex flex-col justify-center gap-6">
                     <h3 id="info-title" class="text-2xl font-bold border-b border-slate-700 pb-4">قنوات التواصل</h3>
                     
-                    <a href="tel:01200109995" class="bg-slate-800 p-6 rounded-2xl border border-slate-700 hover:bg-indigo-600 transition block text-center">
-                        <span class="block text-indigo-400 text-xs font-bold uppercase mb-2">اتصال هاتفي</span>
+                    <a href="tel:01200109995" class="bg-slate-800 p-6 rounded-2xl border border-slate-700 hover:bg-indigo-600 transition block text-center contact-card">
+                        <span class="block text-indigo-400 text-xs font-bold uppercase mb-1">اتصال هاتفـي</span>
                         <span class="text-2xl font-black tracking-widest block">01200109995</span>
                     </a>
 
-                    <a href="https://wa.me/201200109995" target="_blank" class="bg-slate-800 p-5 rounded-2xl border border-slate-700 hover:bg-green-600 transition block text-center">
+                    <a href="https://wa.me/201200109995" target="_blank" class="bg-slate-800 p-5 rounded-2xl border border-slate-700 hover:bg-green-600 transition block text-center contact-card">
                         <span class="font-bold text-lg">💬 واتساب</span>
                     </a>
 
-                    <a href="mailto:almukhtaredu@gmail.com" class="bg-slate-800 p-5 rounded-2xl border border-slate-700 hover:bg-blue-600 transition block text-center">
+                    <a href="mailto:almukhtaredu@gmail.com" class="bg-slate-800 p-5 rounded-2xl border border-slate-700 hover:bg-blue-600 transition block text-center contact-card">
                         <span id="mail-btn-text" class="font-bold text-lg">✉️ راسلنا عبر البريد</span>
                     </a>
                 </div>
@@ -70,8 +59,8 @@
         </div>
     </main>
 
-    <footer class="bg-slate-900 py-10 text-center text-slate-500 font-bold uppercase tracking-widest">
-        <p id="footer-copy">© 2026 ALMUKHTAR EDU. ALL RIGHTS RESERVED.</p>
+    <footer class="bg-slate-900 py-10 text-center">
+        <p id="footer-copy" class="text-slate-500 font-bold uppercase tracking-widest">© 2026 ALMUKHTAR EDU. ALL RIGHTS RESERVED.</p>
     </footer>
 
     <script>
@@ -81,6 +70,7 @@
                 html.dir = 'ltr';
                 document.getElementById('langBtn').innerText = 'عربي';
                 document.getElementById('page-title').innerText = 'Contact Us';
+                document.getElementById('page-subtitle').innerText = 'We welcome your inquiries and suggestions';
                 document.getElementById('info-title').innerText = 'Contact Channels';
                 document.getElementById('mail-btn-text').innerText = '✉️ Send Email';
                 document.getElementById('btn-send').innerText = 'Send Message';
