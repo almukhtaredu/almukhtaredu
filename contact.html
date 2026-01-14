@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" id="main-html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تواصل معنا | Almukhtar Edu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Tajawal', sans-serif; display: flex; flex-direction: column; min-height: 100vh; }
+        .logo-wrapper {
+            position: absolute; top: 10px; z-index: 100; background: white;
+            padding: 8px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border: 1px solid #f1f5f9;
+        }
+        [dir="rtl"] .logo-wrapper { right: 2rem; }
+        [dir="ltr"] .logo-wrapper { left: 2rem; }
+    </style>
+</head>
+<body class="bg-slate-50">
+
+    <nav class="bg-white/95 backdrop-blur-md shadow-sm border-b sticky top-0 z-50 h-20 flex items-center">
+        <div class="container mx-auto px-6 flex justify-between items-center relative">
+            <div class="logo-wrapper">
+                <img src="logo.png" alt="Logo" class="h-16 md:h-24 w-auto object-contain">
+            </div>
+            <div class="flex-1 flex justify-end">
+                <div class="flex items-center gap-10">
+                    <a href="index.html#about" id="ln-about" class="text-slate-600 hover:text-purple-700 font-bold transition">تعرف علينا</a>
+                    <a href="index.html" class="text-slate-600 hover:text-purple-700 font-bold transition">الرئيسية</a>
+                    <div class="border-r pr-6">
+                        <button onclick="toggleAppLang()" id="langBtn" class="bg-slate-50 text-purple-700 px-5 py-2 rounded-lg font-bold border border-purple-200 hover:bg-purple-700 hover:text-white transition">English</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="py-16 text-center bg-slate-900 text-white border-b border-slate-800">
+        <h1 id="page-title" class="text-3xl md:text-4xl font-black mb-4">تواصل معنا</h1>
+        <p id="page-subtitle" class="text-slate-400 font-light max-w-xl mx-auto px-4 italic leading-relaxed">يسعدنا استقبال استفساراتكم واقتراحاتكم عبر القنوات التالية</p>
+    </header>
+
+    <main class="flex-grow py-12 container mx-auto px-4 -mt-8">
+        <div class="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl border border-slate-100 overflow-hidden">
+            <div class="grid md:grid-cols-5">
+                <div class="md:col-span-2 bg-slate-900 p-10 text-white flex flex-col justify-center">
+                    <h3 id="info-title" class="text-xl font-bold mb-8 border-b border-slate-700 pb-4">اتصال سريع</h3>
+                    <div class="space-y-6">
+                        <a href="tel:01200109995" class="flex items-center justify-between bg-slate-800 p-4 rounded-2xl hover:bg-purple-700 transition-all group">
+                            <div class="flex items-center gap-3"><span class="text-xl">📞</span><span class="font-bold text-sm">اتصال هاتفـي</span></div>
+                            <span class="text-xs text-slate-400 group-hover:text-white italic">إضغط للاتصال</span>
+                        </a>
+                        <a href="https://wa.me/201200109995" target="_blank" class="flex items-center justify-between bg-slate-800 p-4 rounded-2xl hover:bg-green-600 transition-all group">
+                            <div class="flex items-center gap-3"><span class="text-xl">💬</span><span class="font-bold text-sm">محادثة واتساب</span></div>
+                            <span class="text-xs text-slate-400 group-hover:text-white italic">إرسال رسالة</span>
+                        </a>
+                        <a href="mailto:almukhtaredu@gmail.com" class="flex items-center justify-between bg-slate-800 p-4 rounded-2xl hover:bg-blue-600 transition-all group">
+                            <div class="flex items-center gap-3"><span class="text-xl">✉️</span><span class="font-bold text-sm">راسلنا عبر البريد</span></div>
+                            <span class="text-xs text-slate-400 group-hover:text-white italic">فتح التطبيق</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="md:col-span-3 p-10">
+                    <form action="#" class="space-y-5">
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">الاسم</label>
+                            <input type="text" placeholder="اسمك الكريم" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-purple-500 outline-none transition">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">رقم الهاتف أو الإيميل</label>
+                            <input type="text" placeholder="لنتمكن من الرد عليك" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-purple-500 outline-none transition">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-2">رسالتك</label>
+                            <textarea rows="4" placeholder="اكتب استفسارك أو اقتراحك هنا..." class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-purple-500 outline-none transition"></textarea>
+                        </div>
+                        <button id="btn-send" class="w-full bg-purple-700 text-white font-black py-4 rounded-xl hover:bg-slate-900 transition-all shadow-lg">إرسال الرسالة</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-slate-900 py-6 text-center border-t border-slate-800">
+        <p id="footer-copy" class="text-slate-400 text-sm tracking-widest font-light uppercase">© 2026 ALMUKHTAR EDU. ALL RIGHTS RESERVED.</p>
+    </footer>
+
+    <script>
+        function toggleAppLang() {
+            const html = document.getElementById('main-html');
+            const isAr = html.dir === 'rtl';
+            html.dir = isAr ? 'ltr' : 'rtl';
+            html.lang = isAr ? 'en' : 'ar';
+            document.getElementById('langBtn').innerText = isAr ? 'عربي' : 'English';
+            document.getElementById('page-title').innerText = isAr ? 'Contact Us' : 'تواصل معنا';
+            document.getElementById('page-subtitle').innerText = isAr ? 'We are pleased to receive your inquiries and suggestions through the following channels' : 'يسعدنا استقبال استفساراتكم واقتراحاتكم عبر القنوات التالية';
+            document.getElementById('info-title').innerText = isAr ? 'Quick Contact' : 'اتصال سريع';
+            document.getElementById('btn-send').innerText = isAr ? 'Send Message' : 'إرسال الرسالة';
+            document.getElementById('footer-copy').innerText = isAr ? '© 2026 ALMUKHTAR EDU. ALL RIGHTS RESERVED.' : '© 2026 ALMUKHTAR EDU. جميع الحقوق محفوظة.';
+        }
+    </script>
+</body>
+</html>
