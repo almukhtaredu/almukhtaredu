@@ -1,46 +1,57 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Almukhtar Edu</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
-    <style>body { font-family: 'Tajawal', sans-serif; }</style>
+    <title>About | Eng. Muhammad Mukhtar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <nav class="bg-white shadow-md sticky top-0 z-50 h-24 flex items-center">
-        <div class="container mx-auto px-6 flex items-center">
-            <img src="logo.png" alt="Logo" class="w-24 h-24 object-contain me-auto">
-            <div class="flex gap-6 items-center">
-                <a href="about.html" class="text-slate-800 font-black hover:text-indigo-600">About Us</a>
-                <a href="contact.html" class="text-slate-800 font-black hover:text-indigo-600">Contact Us</a>
-                <a href="about-ar.html" class="bg-indigo-600 text-white px-6 py-2 rounded-full font-bold">عربي</a>
-            </div>
-        </div>
+<body class="inner-page-padding">
+
+    <div class="side-logo-top">
+        <img src="logo.png" alt="Almukhtar Logo">
+    </div>
+
+    <nav style="position:fixed; top:30px; left:40px; z-index:1000; display:flex; gap:15px;">
+        <a href="index.html" class="corner-link">HOME</a>
+        <a href="contact.html" class="corner-link">CONTACT</a>
     </nav>
 
-    <header class="py-20 text-center bg-slate-900 text-white">
-        <h1 class="text-4xl font-black mb-4">About Almukhtar Edu</h1>
-        <p class="text-slate-400 italic">Leading education with excellence</p>
-    </header>
+    <div class="about-wrapper" style="max-width: 1000px; margin: 0 auto;">
+        <header class="about-header">
+            <h1 class="giant-title">THE <br><span>ARCHITECT</span></h1>
+            <p style="color: var(--math-blue); letter-spacing: 5px; font-weight: bold; margin-bottom: 50px; text-transform: uppercase;">Eng. Muhammad Ahmed Mukhtar</p>
+        </header>
 
-    <main class="py-20 container mx-auto px-4">
-        <div class="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl p-12 text-center">
-            <h2 class="text-3xl font-black text-indigo-900 mb-8">Our Mission</h2>
-            <p class="text-lg text-slate-700 leading-relaxed mb-8">
-                We are dedicated to providing high-quality education in Mathematics and ICT, following strict engineering standards to empower students with logical thinking and technological excellence.
-            </p>
-            <div class="grid md:grid-cols-3 gap-6 mt-12">
-                <div class="p-6 bg-indigo-50 rounded-2xl"><h3 class="text-xl font-black text-indigo-900 mb-2">Logic</h3><p class="text-slate-600">Building strong logical foundations</p></div>
-                <div class="p-6 bg-cyan-50 rounded-2xl"><h3 class="text-xl font-black text-cyan-900 mb-2">Technology</h3><p class="text-slate-600">Embracing modern tech tools</p></div>
-                <div class="p-6 bg-purple-50 rounded-2xl"><h3 class="text-xl font-black text-purple-900 mb-2">Excellence</h3><p class="text-slate-600">Pursuing the highest standards</p></div>
-            </div>
+        <div class="about-grid" style="display: grid; grid-template-columns: 1fr; gap: 40px;">
+            <section class="bio-box" style="background: #0a0a0a; border-left: 5px solid var(--ict-purple); padding: 40px;">
+                <h3 style="font-family: 'Syncopate'; font-size: 1.2rem; margin-bottom: 20px; color: var(--ict-purple);">ACADEMIC BACKGROUND</h3>
+                <p style="line-height: 1.8; color: #ccc; font-size: 1.1rem;">
+                    A distinguished graduate of the <strong>Faculty of Engineering, Alexandria University</strong>. 
+                    As a Civil Engineer, my foundation is built on structural logic, precision, and complex problem-solving—skills that I seamlessly transition into the world of education.
+                </p>
+            </section>
+
+            <section class="bio-box" style="background: #0a0a0a; border-left: 5px solid var(--math-blue); padding: 40px;">
+                <h3 style="font-family: 'Syncopate'; font-size: 1.2rem; margin-bottom: 20px; color: var(--math-blue);">EDUCATIONAL MISSION</h3>
+                <p style="line-height: 1.8; color: #ccc; font-size: 1.1rem;">
+                    Specializing in <strong>Mathematics</strong> and <strong>ICT</strong>, I bridge the gap between theoretical numbers and digital innovation. My passion for pedagogy drives me to redefine how students perceive logic, making it more intuitive, interactive, and future-ready.
+                </p>
+            </section>
+
+            <section class="bio-box" style="background: #0a0a0a; border-left: 5px solid #fff; padding: 40px;">
+                <h3 style="font-family: 'Syncopate'; font-size: 1.2rem; margin-bottom: 20px;">CORE PHILOSOPHY</h3>
+                <p style="line-height: 1.8; color: #ccc; font-size: 1.1rem;">
+                    Education is not just about delivering content; it’s about engineering minds. I am dedicated to creating an environment where <strong>Logic meets Technology</strong>, empowering the next generation of thinkers to build their own futures.
+                </p>
+            </section>
         </div>
-    </main>
+    </div>
 
-    <footer class="bg-slate-900 py-10 text-center">
-        <p class="text-slate-500 font-bold">© 2026 Almukhtar Edu. ALL RIGHTS RESERVED.</p>
+    <footer class="bottom-footer">
+        <p>© 2026 ALMUKHTAR EDUCATIONAL FOUNDATION | ENG. MUHAMMAD MUKHTAR</p>
     </footer>
+
 </body>
 </html>
