@@ -3,36 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ALMUKHTAR | Eng. Muhammad Mukhtar</title>
-    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Almukhtar Edu | Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="logo-container">
-        <img src="logo.png" alt="Almukhtar Logo" class="main-logo">
-    </div>
-
     <nav style="position:fixed; top:30px; left:40px; z-index:1000; display:flex; gap:15px;">
-        <a href="about.html" class="corner-link">ABOUT</a>
-        <a href="contact.html" class="corner-link">CONTACT</a>
+        <a href="about.html" class="corner-link">ABOUT US</a>
+        <a href="contact.html" class="corner-link">CONTACT US</a>
     </nav>
+
+    <div class="center-piece">
+        <img src="logo.png" alt="Almukhtar Logo" class="hero-logo">
+    </div>
 
     <main class="main-split">
         <section class="half math-half" onclick="window.location.href='math.html'">
-            <div style="text-align:center;">
-                <h2 style="color: var(--math-blue);">MATH</h2>
-                <p>LOGIC & MASTERY</p>
+            <div class="label-wrapper">
+                <h2>MATH</h2>
+                <p>Logic & Mastery</p>
             </div>
         </section>
 
         <section class="half ict-half" onclick="window.location.href='ict.html'">
-            <div style="text-align:center;">
-                <h2 style="color: var(--ict-purple);">ICT</h2>
-                <p>DIGITAL INNOVATION</p>
+            <div class="label-wrapper">
+                <h2>ICT</h2>
+                <p>Digital Innovation</p>
             </div>
         </section>
     </main>
+
+    <footer class="bottom-footer">
+        <p>© 2026 ALMUKHTAR EDUCATIONAL FOUNDATION | ENG. MUHAMMAD MUKHTAR</p>
+    </footer>
 
 </body>
 </html>
