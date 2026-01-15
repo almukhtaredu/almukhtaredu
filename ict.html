@@ -8,65 +8,65 @@
     <link rel="stylesheet" href="style.css">
     <style>
         body {
-            background-color: #05000a;
-            background-image: radial-gradient(var(--ict-purple) 1px, transparent 0);
-            background-size: 40px 40px;
+            background-color: #080010;
             overflow-x: hidden;
         }
 
-        .cyber-bg {
+        /* تأثير مطر الأكواد Matrix Style */
+        .cyber-rain {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            pointer-events: none; z-index: -1; opacity: 0.2;
+            pointer-events: none; z-index: -1;
         }
-        .code-drop {
+
+        .code-line {
             position: absolute; color: var(--ict-purple); font-family: monospace;
-            animation: fall 10s infinite linear; font-size: 1.2rem;
+            font-size: 1.5rem; font-weight: bold; opacity: 0;
+            animation: matrix-fall 5s infinite linear;
         }
-        @keyframes fall {
-            0% { transform: translateY(-10vh); opacity: 0; }
-            50% { opacity: 1; }
+
+        @keyframes matrix-fall {
+            0% { transform: translateY(-20vh); opacity: 0; }
+            20% { opacity: 1; }
+            80% { opacity: 1; }
             100% { transform: translateY(110vh); opacity: 0; }
         }
 
         .ict-title span {
             color: var(--ict-purple);
-            text-shadow: 0 0 30px rgba(123, 67, 151, 0.8);
+            text-shadow: 0 0 40px rgba(123, 67, 151, 1);
             -webkit-text-stroke: 0px;
         }
 
         .grade-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-            margin-top: 60px;
-            padding-bottom: 100px;
+            gap: 30px; margin-top: 60px; padding-bottom: 100px;
         }
 
         .grade-card {
-            background: rgba(0, 0, 0, 0.85);
-            border: 2px solid rgba(123, 67, 151, 0.2);
-            padding: 45px 30px;
-            transition: 0.5s;
+            background: rgba(0, 0, 0, 0.9);
+            border: 2px solid var(--ict-purple);
+            padding: 50px 30px; transition: 0.4s;
             cursor: pointer; text-decoration: none; color: #fff;
-            position: relative; overflow: hidden;
         }
 
         .grade-card:hover {
-            border-color: var(--ict-purple);
-            transform: scale(1.03);
-            box-shadow: 0 0 40px rgba(123, 67, 151, 0.3);
+            box-shadow: 0 0 30px rgba(123, 67, 151, 0.5);
+            transform: scale(1.05);
         }
 
-        .grade-card h3 { font-family: 'Syncopate'; font-size: 1.8rem; margin-bottom: 10px; }
-        .cyber-label { color: var(--ict-purple); font-size: 0.7rem; letter-spacing: 3px; font-weight: bold; margin-bottom: 10px; display: block; }
+        .grade-card h3 { font-family: 'Syncopate'; font-size: 1.8rem; }
     </style>
 </head>
 <body class="inner-page-padding">
 
-    <div class="cyber-bg">
-        <div class="code-drop" style="left: 20%;">0101</div>
-        <div class="code-drop" style="left: 50%; animation-delay: 2s;">&lt;/&gt;</div>
-        <div class="code-drop" style="left: 80%; animation-delay: 5s;">CODE</div>
+    <div class="cyber-rain">
+        <div class="code-line" style="left: 10%; animation-delay: 0s;">10110</div>
+        <div class="code-line" style="left: 25%; animation-delay: 2s;">&lt;HTML&gt;</div>
+        <div class="code-line" style="left: 45%; animation-delay: 1s;">{ JSON }</div>
+        <div class="code-line" style="left: 65%; animation-delay: 3s;">00101</div>
+        <div class="code-line" style="left: 85%; animation-delay: 0.5s;">SCRIPTS</div>
+        <div class="code-line" style="left: 95%; animation-delay: 4s;">BINARY</div>
     </div>
 
     <div class="side-logo-top"><img src="logo.png" alt="Logo"></div>
@@ -74,13 +74,12 @@
 
     <div class="wrapper" style="max-width: 1200px; margin: 0 auto;">
         <h1 class="giant-title ict-title">ICT<br><span>REALM</span></h1>
-        
         <div class="grade-grid">
-            <a href="#" class="grade-card"><span class="cyber-label">// GRADE 4</span><h3>PRIMARY 4</h3><p>Exploring the Digital World.</p></a>
-            <a href="#" class="grade-card"><span class="cyber-label">// GRADE 5</span><h3>PRIMARY 5</h3><p>Mastering Digital Tools.</p></a>
-            <a href="#" class="grade-card"><span class="cyber-label">// GRADE 6</span><h3>PRIMARY 6</h3><p>Innovation & Safety.</p></a>
-            <a href="#" class="grade-card"><span class="cyber-label">// PREP 1</span><h3>PREP 1</h3><p>Advanced Computing Logic.</p></a>
-            <a href="#" class="grade-card"><span class="cyber-label">// PREP 2</span><h3>PREP 2</h3><p>Web Development Foundations.</p></a>
+            <a href="#" class="grade-card"><h3>PRIMARY 4</h3></a>
+            <a href="#" class="grade-card"><h3>PRIMARY 5</h3></a>
+            <a href="#" class="grade-card"><h3>PRIMARY 6</h3></a>
+            <a href="#" class="grade-card"><h3>PREP 1</h3></a>
+            <a href="#" class="grade-card"><h3>PREP 2</h3></a>
         </div>
     </div>
 </body>
