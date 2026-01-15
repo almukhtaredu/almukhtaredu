@@ -17,31 +17,23 @@ body {
     overflow-x: hidden;
 }
 
-/* التنسيق المشترك للكلمات الكبيرة */
-.giant-title {
-    font-family: 'Syncopate', sans-serif;
-    font-size: clamp(3rem, 8vw, 7rem);
-    line-height: 0.9;
-    margin-bottom: 20px;
+/* اللوجو الرئيسي في نص الصفحة */
+.logo-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    pointer-events: none;
 }
 
-/* روابط الزوايا */
-.corner-link {
-    color: white;
-    text-decoration: none;
-    font-size: 0.8rem;
-    letter-spacing: 3px;
-    border: 1px solid rgba(255,255,255,0.3);
-    padding: 10px 20px;
-    transition: 0.3s;
+.main-logo {
+    width: 180px; /* الحجم الأصلي الفخم */
+    height: auto;
+    filter: drop-shadow(0 0 15px rgba(255,255,255,0.2));
 }
 
-.corner-link:hover {
-    background: white;
-    color: black;
-}
-
-/* اللوجو الثابت */
+/* اللوجو الصغير في الصفحات الداخلية فقط */
 .side-logo-top img {
     position: fixed;
     top: 20px;
@@ -50,14 +42,40 @@ body {
     z-index: 1000;
 }
 
-.inner-page-padding {
-    padding: 100px 5% 50px;
+/* ضبط حجم الخطوط عشان متبقاش عملاقة */
+.giant-title {
+    font-family: 'Syncopate', sans-serif;
+    font-size: clamp(2.5rem, 6vw, 5rem); /* تصغير الحجم الأقصى */
+    line-height: 1;
+    margin-bottom: 20px;
 }
 
-.bottom-footer {
-    text-align: center;
-    padding: 40px;
+.half h2 {
+    font-family: 'Syncopate', sans-serif;
+    font-size: 6vw; /* حجم متوازن للماث والـ ICT */
+    letter-spacing: -2px;
+}
+
+/* الهيدر والنافيجيشن */
+.top-nav {
+    position: fixed;
+    top: 30px;
+    left: 40px;
+    z-index: 1000;
+    display: flex;
+    gap: 15px;
+}
+
+.corner-link {
+    color: white;
+    text-decoration: none;
     font-size: 0.7rem;
     letter-spacing: 2px;
-    color: #444;
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 8px 16px;
+    transition: 0.3s;
+}
+
+.inner-page-padding {
+    padding: 120px 5% 50px;
 }
