@@ -7,43 +7,40 @@
     <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-        body { 
-            background-image: linear-gradient(rgba(79,172,254,0.1) 1px, transparent 1px), 
-                              linear-gradient(90deg, rgba(79,172,254,0.1) 1px, transparent 1px);
+        body {
+            background-image: linear-gradient(rgba(79, 172, 254, 0.1) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(79, 172, 254, 0.1) 1px, transparent 1px);
             background-size: 40px 40px;
         }
         .symbol {
             position: fixed; color: var(--math-blue); font-family: 'Syncopate';
-            font-weight: bold; animation: float 10s infinite linear; opacity: 0; z-index: -1;
+            font-weight: bold; animation: float 12s infinite linear; opacity: 0; z-index: -1;
         }
         @keyframes float {
             0% { transform: translateY(110vh); opacity: 0; }
-            50% { opacity: 0.7; }
+            50% { opacity: 0.6; }
             100% { transform: translateY(-10vh); opacity: 0; }
         }
-        .grade-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
-        .grade-card { 
-            background: rgba(0,0,0,0.9); border: 2px solid var(--math-blue); 
-            padding: 60px 40px; text-decoration: none; color: white; transition: 0.4s;
-        }
-        .grade-card:hover { transform: translateY(-10px); box-shadow: 0 0 30px rgba(79,172,254,0.3); }
-        .grade-card h3 { font-family: 'Syncopate'; font-size: 2.5rem; }
+        .grade-card { border-color: rgba(79, 172, 254, 0.3); }
+        .grade-card:hover { border-color: var(--math-blue); box-shadow: 0 0 30px rgba(79, 172, 254, 0.2); }
+        .grade-card h3 { font-family: 'Syncopate'; font-size: 2rem; margin-bottom: 10px; }
     </style>
 </head>
 <body class="inner-page-padding">
-    <div class="symbol" style="left:10%; font-size:3rem; animation-delay:0s;">∑</div>
-    <div class="symbol" style="left:30%; font-size:2rem; animation-delay:3s;">π</div>
-    <div class="symbol" style="left:60%; font-size:4rem; animation-delay:1s;">√</div>
-    <div class="symbol" style="left:80%; font-size:2.5rem; animation-delay:5s;">∞</div>
+    <div class="symbol" style="left: 10%; font-size: 3rem;">∑</div>
+    <div class="symbol" style="left: 40%; font-size: 2rem; animation-delay: 2s;">π</div>
+    <div class="symbol" style="left: 70%; font-size: 4rem; animation-delay: 4s;">√</div>
+    <div class="symbol" style="left: 90%; font-size: 2.5rem; animation-delay: 1s;">∞</div>
 
     <div class="side-logo-top"><img src="logo.png"></div>
     <nav style="position:fixed; top:30px; left:40px; z-index:1000;"><a href="index.html" class="corner-link">BACK</a></nav>
 
-    <h1 class="giant-title">MATH<br><span style="color:var(--math-blue)">REALM</span></h1>
+    <h1 class="giant-title">MATH<br><span style="color: var(--math-blue);">REALM</span></h1>
+    
     <div class="grade-grid">
-        <a href="#" class="grade-card"><h3>PREP 1</h3><p>Algebra & Geometry Logic</p></a>
-        <div class="grade-card" style="opacity:0.4;"><h3>PREP 2</h3><p>Coming 2026</p></div>
-        <div class="grade-card" style="opacity:0.4;"><h3>PREP 3</h3><p>Coming 2026</p></div>
+        <a href="#" class="grade-card"><h3>PREP 1</h3><p>Algebra & Geometry</p></a>
+        <div class="grade-card" style="opacity: 0.5;"><h3>PREP 2</h3><p>Coming Soon</p></div>
+        <div class="grade-card" style="opacity: 0.5;"><h3>PREP 3</h3><p>Coming Soon</p></div>
     </div>
 </body>
 </html>
