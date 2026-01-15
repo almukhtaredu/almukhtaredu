@@ -9,7 +9,6 @@
     <style>
         body {
             background-color: #00050a;
-            /* شبكة هندسية واضحة */
             background-image: 
                 linear-gradient(rgba(79, 172, 254, 0.1) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(79, 172, 254, 0.1) 1px, transparent 1px);
@@ -17,19 +16,17 @@
             overflow-x: hidden;
         }
 
-        /* تأثير الأرقام الطائرة في الخلفية */
         .floating-math {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            pointer-events: none; z-index: -1; opacity: 0.2;
+            pointer-events: none; z-index: -1; opacity: 0.3;
         }
         .float-item {
             position: absolute; color: var(--math-blue); font-family: 'Syncopate';
-            animation: float 10s infinite linear;
+            animation: float 12s infinite linear; font-size: 2rem;
         }
-
         @keyframes float {
             0% { transform: translateY(110vh) rotate(0deg); opacity: 0; }
-            50% { opacity: 1; }
+            50% { opacity: 0.8; }
             100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
         }
 
@@ -41,41 +38,39 @@
 
         .grade-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
             margin-top: 60px;
+            padding-bottom: 100px;
         }
 
         .grade-card {
-            background: rgba(0, 0, 0, 0.8);
-            border: 2px solid rgba(79, 172, 254, 0.3);
-            padding: 50px;
-            transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            background: rgba(0, 0, 0, 0.85);
+            border: 2px solid rgba(79, 172, 254, 0.2);
+            padding: 45px 30px;
+            transition: 0.5s;
             cursor: pointer; text-decoration: none; color: #fff;
             position: relative; overflow: hidden;
         }
 
         .grade-card:hover {
             border-color: var(--math-blue);
-            transform: translateY(-15px) scale(1.02);
-            box-shadow: 0 20px 50px rgba(79, 172, 254, 0.2);
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(79, 172, 254, 0.2);
         }
 
         .grade-card h3 { font-family: 'Syncopate'; font-size: 2rem; margin-bottom: 15px; }
-        .equation-bg {
-            position: absolute; right: -10px; bottom: -10px;
-            font-size: 6rem; opacity: 0.1; font-weight: 900; color: var(--math-blue);
-        }
+        .status-tag { font-size: 0.7rem; letter-spacing: 2px; padding: 5px 10px; border: 1px solid; display: inline-block; margin-bottom: 15px; }
+        .active-tag { border-color: #00ff88; color: #00ff88; }
+        .coming-tag { border-color: #ffcc00; color: #ffcc00; }
     </style>
 </head>
 <body class="inner-page-padding">
 
     <div class="floating-math">
-        <div class="float-item" style="left: 10%; animation-delay: 0s;">∑</div>
-        <div class="float-item" style="left: 30%; animation-delay: 2s;">π</div>
-        <div class="float-item" style="left: 50%; animation-delay: 4s;">√</div>
-        <div class="float-item" style="left: 70%; animation-delay: 1s;">∞</div>
-        <div class="float-item" style="left: 90%; animation-delay: 5s;">∫</div>
+        <div class="float-item" style="left: 15%; animation-delay: 0s;">∑</div>
+        <div class="float-item" style="left: 45%; animation-delay: 3s;">π</div>
+        <div class="float-item" style="left: 75%; animation-delay: 6s;">√</div>
     </div>
 
     <div class="side-logo-top"><img src="logo.png" alt="Logo"></div>
@@ -85,12 +80,22 @@
         <h1 class="giant-title math-title">MATH<br><span>REALM</span></h1>
         
         <div class="grade-grid">
-            <a href="#" class="grade-card">
+            <a href="math-p1.html" class="grade-card">
+                <span class="status-tag active-tag">AVAILABLE</span>
                 <h3>PREP 1</h3>
-                <p>Advanced Algebraic Structures & Geometry Logic.</p>
-                <div class="equation-bg">f(x)</div>
+                <p>Mastering Algebra & Geometry basics.</p>
             </a>
+            <div class="grade-card" style="opacity: 0.6;">
+                <span class="status-tag coming-tag">COMING 2026</span>
+                <h3>PREP 2</h3>
+                <p>Advanced Mathematical Logic.</p>
             </div>
+            <div class="grade-card" style="opacity: 0.6;">
+                <span class="status-tag coming-tag">COMING 2026</span>
+                <h3>PREP 3</h3>
+                <p>Final Preparatory Excellence.</p>
+            </div>
+        </div>
     </div>
 </body>
 </html>
