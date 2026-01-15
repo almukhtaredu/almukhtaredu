@@ -9,31 +9,28 @@
     <style>
         .code-drop {
             position: fixed; color: var(--ict-purple); font-family: monospace;
-            font-size: 1.5rem; animation: fall 6s infinite linear; opacity: 0; z-index: -1;
+            font-size: 1.2rem; animation: fall 5s infinite linear; opacity: 0; z-index: -1;
         }
         @keyframes fall {
             0% { transform: translateY(-10vh); opacity: 0; }
             50% { opacity: 0.8; }
             100% { transform: translateY(110vh); opacity: 0; }
         }
-        .grade-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
-        .grade-card { 
-            background: rgba(0,0,0,0.9); border: 2px solid var(--ict-purple); 
-            padding: 50px 30px; text-decoration: none; color: white; transition: 0.4s;
-        }
-        .grade-card:hover { transform: scale(1.05); box-shadow: 0 0 30px rgba(123, 67, 151, 0.4); }
-        .grade-card h3 { font-family: 'Syncopate'; font-size: 2rem; }
+        .grade-card { border-color: rgba(123, 67, 151, 0.3); }
+        .grade-card:hover { border-color: var(--ict-purple); box-shadow: 0 0 30px rgba(123, 67, 151, 0.2); }
+        .grade-card h3 { font-family: 'Syncopate'; font-size: 1.8rem; margin-bottom: 10px; }
     </style>
 </head>
 <body class="inner-page-padding">
-    <div class="code-drop" style="left:15%; animation-delay:0s;">10101</div>
-    <div class="code-drop" style="left:45%; animation-delay:2s;">&lt;/&gt;</div>
-    <div class="code-drop" style="left:75%; animation-delay:1s;">{CODE}</div>
+    <div class="code-drop" style="left: 20%;">10110</div>
+    <div class="code-drop" style="left: 50%; animation-delay: 2s;">&lt;HTML&gt;</div>
+    <div class="code-drop" style="left: 80%; animation-delay: 1s;">{CODE}</div>
 
     <div class="side-logo-top"><img src="logo.png"></div>
     <nav style="position:fixed; top:30px; left:40px; z-index:1000;"><a href="index.html" class="corner-link">BACK</a></nav>
 
-    <h1 class="giant-title">ICT<br><span style="color:var(--ict-purple)">REALM</span></h1>
+    <h1 class="giant-title">ICT<br><span style="color: var(--ict-purple);">REALM</span></h1>
+    
     <div class="grade-grid">
         <a href="#" class="grade-card"><h3>PRIMARY 4</h3></a>
         <a href="#" class="grade-card"><h3>PRIMARY 5</h3></a>
