@@ -4,11 +4,7 @@
     --bg-black: #050505;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
     background-color: var(--bg-black);
@@ -17,7 +13,7 @@ body {
     overflow-x: hidden;
 }
 
-/* اللوجو الرئيسي في نص الصفحة */
+/* اللوجو في منتصف الصفحة الرئيسية */
 .logo-container {
     position: absolute;
     top: 50%;
@@ -28,42 +24,54 @@ body {
 }
 
 .main-logo {
-    width: 180px; /* الحجم الأصلي الفخم */
+    width: 150px; /* حجم معقول جداً */
     height: auto;
-    filter: drop-shadow(0 0 15px rgba(255,255,255,0.2));
 }
 
-/* اللوجو الصغير في الصفحات الداخلية فقط */
+/* التقسيم الرئيسي */
+.main-split {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+.half {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    transition: 0.5s ease;
+}
+
+.math-half { border-right: 1px solid rgba(255,255,255,0.05); }
+
+/* توحيد حجم الخط بصرياً */
+.half h2 {
+    font-family: 'Syncopate', sans-serif;
+    font-size: 5.5vw; /* حجم موحد وموزون بالمللي */
+    line-height: 1;
+    z-index: 5;
+}
+
+.half p {
+    letter-spacing: 5px;
+    font-size: 0.7rem;
+    opacity: 0.5;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* الصفحات الداخلية */
+.inner-page-padding { padding: 120px 5% 50px; }
+
 .side-logo-top img {
     position: fixed;
     top: 20px;
     right: 20px;
-    width: 60px;
+    width: 50px;
     z-index: 1000;
-}
-
-/* ضبط حجم الخطوط عشان متبقاش عملاقة */
-.giant-title {
-    font-family: 'Syncopate', sans-serif;
-    font-size: clamp(2.5rem, 6vw, 5rem); /* تصغير الحجم الأقصى */
-    line-height: 1;
-    margin-bottom: 20px;
-}
-
-.half h2 {
-    font-family: 'Syncopate', sans-serif;
-    font-size: 6vw; /* حجم متوازن للماث والـ ICT */
-    letter-spacing: -2px;
-}
-
-/* الهيدر والنافيجيشن */
-.top-nav {
-    position: fixed;
-    top: 30px;
-    left: 40px;
-    z-index: 1000;
-    display: flex;
-    gap: 15px;
 }
 
 .corner-link {
@@ -72,10 +80,5 @@ body {
     font-size: 0.7rem;
     letter-spacing: 2px;
     border: 1px solid rgba(255,255,255,0.2);
-    padding: 8px 16px;
-    transition: 0.3s;
-}
-
-.inner-page-padding {
-    padding: 120px 5% 50px;
+    padding: 8px 15px;
 }
