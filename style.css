@@ -4,7 +4,11 @@
     --bg-black: #050505;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     background-color: var(--bg-black);
@@ -20,15 +24,33 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 10;
-    pointer-events: none;
+    pointer-events: none; /* عشان الماوس يعدي من عليه للأزرار */
 }
 
 .main-logo {
-    width: 150px; /* حجم معقول جداً */
+    width: 160px;
     height: auto;
+    filter: drop-shadow(0 0 20px rgba(0,0,0,0.5));
 }
 
-/* التقسيم الرئيسي */
+/* اللوجو الصغير للصفحات الداخلية */
+.side-logo-top img {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 60px;
+    z-index: 1000;
+}
+
+/* العناوين الضخمة في الصفحات الداخلية */
+.giant-title {
+    font-family: 'Syncopate', sans-serif;
+    font-size: 4rem;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+/* تقسيم الصفحة الرئيسية */
 .main-split {
     display: flex;
     height: 100vh;
@@ -41,44 +63,50 @@ body {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    position: relative;
     transition: 0.5s ease;
+    position: relative;
 }
 
-.math-half { border-right: 1px solid rgba(255,255,255,0.05); }
+.math-half { border-right: 1px solid rgba(255,255,255,0.1); }
+.half:hover { flex: 1.5; }
 
-/* توحيد حجم الخط بصرياً */
 .half h2 {
     font-family: 'Syncopate', sans-serif;
-    font-size: 5.5vw; /* حجم موحد وموزون بالمللي */
-    line-height: 1;
-    z-index: 5;
+    font-size: 4rem; /* الحجم الطبيعي المتناسق */
+    margin: 0;
+    transition: 0.3s;
 }
 
 .half p {
     letter-spacing: 5px;
-    font-size: 0.7rem;
-    opacity: 0.5;
+    font-size: 0.8rem;
+    opacity: 0.6;
     margin-top: 10px;
-    text-align: center;
 }
 
-/* الصفحات الداخلية */
-.inner-page-padding { padding: 120px 5% 50px; }
-
-.side-logo-top img {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    width: 50px;
-    z-index: 1000;
+/* الكروت والشبكة */
+.grade-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+    padding-bottom: 100px;
 }
 
-.corner-link {
-    color: white;
+.grade-card {
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 40px;
+    transition: 0.4s;
     text-decoration: none;
-    font-size: 0.7rem;
-    letter-spacing: 2px;
-    border: 1px solid rgba(255,255,255,0.2);
-    padding: 8px 15px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.grade-card:hover { transform: translateY(-10px); }
+.inner-page-padding { padding: 100px 5% 50px; }
+.corner-link {
+    color: white; text-decoration: none; font-size: 0.8rem; letter-spacing: 2px;
+    border: 1px solid rgba(255,255,255,0.3); padding: 10px 20px;
 }
