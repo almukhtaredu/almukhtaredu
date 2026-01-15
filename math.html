@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Realm | Almukhtar Edu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* عالم الماث الخاص */
+        body {
+            background-color: #00050a; /* أسود مائل للأزرق */
+            background-image: 
+                linear-gradient(rgba(79, 172, 254, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(79, 172, 254, 0.05) 1px, transparent 1px);
+            background-size: 30px 30px; /* شكل المربعات الهندسية */
+        }
+
+        .math-title span {
+            color: var(--math-blue);
+            text-shadow: 0 0 20px rgba(79, 172, 254, 0.6);
+            -webkit-text-stroke: 0px;
+        }
+
+        .grade-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .grade-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(79, 172, 254, 0.2);
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+            transition: 0.5s;
+            cursor: pointer;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .grade-card:hover {
+            background: rgba(79, 172, 254, 0.05);
+            border-color: var(--math-blue);
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(79, 172, 254, 0.1);
+        }
+
+        .grade-card h3 {
+            font-family: 'Syncopate';
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .status-tag {
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            padding: 5px 12px;
+            border: 1px solid;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .active-tag { border-color: #00ff88; color: #00ff88; }
+        .coming-tag { border-color: #ffcc00; color: #ffcc00; }
+
+        .equation-bg {
+            position: absolute;
+            right: -20px;
+            bottom: -10px;
+            font-size: 5rem;
+            font-weight: 900;
+            opacity: 0.05;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body class="inner-page-padding">
+
+    <div class="side-logo-top">
+        <img src="logo.png" alt="Almukhtar Logo">
+    </div>
+
+    <nav style="position:fixed; top:30px; left:40px; z-index:1000; display:flex; gap:15px;">
+        <a href="index.html" class="corner-link">BACK TO HOME</a>
+    </nav>
+
+    <div class="wrapper" style="max-width: 1200px; margin: 0 auto;">
+        <header>
+            <h1 class="giant-title math-title">MATH<br><span>REALM</span></h1>
+            <p style="color: #666; letter-spacing: 2px;">LOGICAL STRUCTURES & NUMERICAL MASTERY</p>
+        </header>
+
+        <div class="grade-grid">
+            <a href="math-g7.html" class="grade-card">
+                <span class="status-tag active-tag">AVAILABLE NOW</span>
+                <h3>PREP 1</h3>
+                <p style="color: #ccc;">Foundations of Algebra and Geometry. Master the basics of logic.</p>
+                <div class="equation-bg">x + y</div>
+            </a>
+
+            <div class="grade-card" style="opacity: 0.6; cursor: not-allowed;">
+                <span class="status-tag coming-tag">COMING SOON (2026)</span>
+                <h3>PREP 2</h3>
+                <p style="color: #666;">Expanding the horizons of equations and spatial reasoning.</p>
+                <div class="equation-bg">√x</div>
+            </div>
+
+            <div class="grade-card" style="opacity: 0.6; cursor: not-allowed;">
+                <span class="status-tag coming-tag">COMING SOON (2026)</span>
+                <h3>PREP 3</h3>
+                <p style="color: #666;">The final step towards high school mathematics excellence.</p>
+                <div class="equation-bg">sin θ</div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bottom-footer">
+        <p>© 2026 ALMUKHTAR EDUCATIONAL FOUNDATION | THE MATH REALM</p>
+    </footer>
+
+</body>
+</html>
