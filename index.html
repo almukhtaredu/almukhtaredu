@@ -6,44 +6,33 @@
     <title>ALMUKHTAR | Eng. Muhammad Mukhtar</title>
     <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <style>
-        .main-split { display: flex; height: 100vh; width: 100%; }
-        .half { 
-            flex: 1; display: flex; align-items: center; justify-content: center; 
-            cursor: pointer; transition: 0.6s; position: relative; overflow: hidden;
-        }
-        .math-half { border-right: 1px solid rgba(255,255,255,0.1); }
-        .half:hover { flex: 1.5; }
-        .label-wrapper { text-align: center; z-index: 2; }
-        .half h2 { 
-            font-family: 'Syncopate'; font-size: 7vw; margin: 0; transition: 0.5s;
-            letter-spacing: -2px;
-        }
-        .half p { letter-spacing: 5px; font-size: 0.8rem; opacity: 0.6; margin-top: 10px; }
-        .math-half:hover { background: rgba(79, 172, 254, 0.05); }
-        .ict-half:hover { background: rgba(123, 67, 151, 0.05); }
-    </style>
 </head>
 <body>
-    <div class="side-logo-top"><img src="logo.png"></div>
-    <nav style="position:fixed; top:30px; left:40px; z-index:1000; display:flex; gap:15px;">
-        <a href="about.html" class="corner-link">ABOUT</a>
-        <a href="contact.html" class="corner-link">CONTACT</a>
+
+    <div class="logo-container">
+        <img src="logo.png" alt="Almukhtar Logo" class="main-logo">
+    </div>
+
+    <nav class="top-nav">
+        <a href="about.html" class="nav-link corner-link">ABOUT</a>
+        <a href="contact.html" class="nav-link corner-link">CONTACT</a>
     </nav>
 
-    <main class="main-split">
-        <section class="half math-half" onclick="window.location.href='math.html'">
-            <div class="label-wrapper">
-                <h2 style="color: var(--math-blue);">MATH</h2>
-                <p>LOGIC & MASTERY</p>
+    <main style="display: flex; height: 100vh;">
+        <section class="half" style="flex:1; display:flex; align-items:center; justify-content:center; cursor:pointer; border-right:1px solid rgba(255,255,255,0.05);" onclick="window.location.href='math.html'">
+            <div style="text-align:center;">
+                <h2 style="color: var(--math-blue); font-family:'Syncopate'; font-size:6vw;">MATH</h2>
+                <p style="letter-spacing:5px; font-size:0.7rem; opacity:0.5;">LOGIC & MASTERY</p>
             </div>
         </section>
-        <section class="half ict-half" onclick="window.location.href='ict.html'">
-            <div class="label-wrapper">
-                <h2 style="color: var(--ict-purple);">ICT</h2>
-                <p>DIGITAL INNOVATION</p>
+
+        <section class="half" style="flex:1; display:flex; align-items:center; justify-content:center; cursor:pointer;" onclick="window.location.href='ict.html'">
+            <div style="text-align:center;">
+                <h2 style="color: var(--ict-purple); font-family:'Syncopate'; font-size:6vw;">ICT</h2>
+                <p style="letter-spacing:5px; font-size:0.7rem; opacity:0.5;">DIGITAL INNOVATION</p>
             </div>
         </section>
     </main>
+
 </body>
 </html>
