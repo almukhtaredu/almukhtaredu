@@ -3,33 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ALMUKHTAR | Eng. Muhammad Mukhtar</title>
+    <title>ALMUKHTAR</title>
     <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="logo-container">
-        <img src="logo.png" alt="Almukhtar Logo" class="main-logo">
+        <img src="logo.png" alt="Logo" class="main-logo">
     </div>
 
-    <nav class="top-nav">
-        <a href="about.html" class="nav-link corner-link">ABOUT</a>
-        <a href="contact.html" class="nav-link corner-link">CONTACT</a>
+    <nav style="position:fixed; top:30px; left:40px; z-index:1000; display:flex; gap:10px;">
+        <a href="about.html" class="corner-link">ABOUT</a>
+        <a href="contact.html" class="corner-link">CONTACT</a>
     </nav>
 
-    <main style="display: flex; height: 100vh;">
-        <section class="half" style="flex:1; display:flex; align-items:center; justify-content:center; cursor:pointer; border-right:1px solid rgba(255,255,255,0.05);" onclick="window.location.href='math.html'">
+    <main class="main-split">
+        <section class="half math-half" onclick="window.location.href='math.html'">
             <div style="text-align:center;">
-                <h2 style="color: var(--math-blue); font-family:'Syncopate'; font-size:6vw;">MATH</h2>
-                <p style="letter-spacing:5px; font-size:0.7rem; opacity:0.5;">LOGIC & MASTERY</p>
+                <h2 style="color: var(--math-blue);">MATH</h2>
+                <p>LOGIC & MASTERY</p>
             </div>
         </section>
 
-        <section class="half" style="flex:1; display:flex; align-items:center; justify-content:center; cursor:pointer;" onclick="window.location.href='ict.html'">
+        <section class="half ict-half" onclick="window.location.href='ict.html'">
             <div style="text-align:center;">
-                <h2 style="color: var(--ict-purple); font-family:'Syncopate'; font-size:6vw;">ICT</h2>
-                <p style="letter-spacing:5px; font-size:0.7rem; opacity:0.5;">DIGITAL INNOVATION</p>
+                <h2 style="color: var(--ict-purple);">ICT</h2>
+                <p>DIGITAL INNOVATION</p>
             </div>
         </section>
     </main>
