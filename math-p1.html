@@ -29,12 +29,13 @@
             transition: 0.4s;
             position: relative;
             overflow: hidden;
+            
+            /* مغلق حالياً */
+            opacity: 0.5;
+            cursor: default;
+            pointer-events: none;
         }
-        .term-card:hover {
-            border-color: var(--math-blue);
-            transform: translateY(-10px);
-            box-shadow: 0 0 30px rgba(79, 172, 254, 0.2);
-        }
+
         .term-card h2 {
             font-family: 'Syncopate';
             font-size: 2.5rem;
@@ -60,14 +61,14 @@
         <h1 class="giant-title">PREP 1<br><span style="color:var(--math-blue)">SELECT TERM</span></h1>
         
         <div class="selection-grid">
-            <a href="math-p1-t1.html" class="term-card">
+            <a href="#" class="term-card">
                 <h2>TERM 1</h2>
-                <p>Algebra & Geometry</p>
+                <p>COMING SOON</p>
             </a>
 
-            <a href="#" class="term-card" style="opacity: 0.5; cursor: default;">
+            <a href="#" class="term-card">
                 <h2>TERM 2</h2>
-                <p>Coming Soon</p>
+                <p>COMING SOON</p>
             </a>
         </div>
     </div>
