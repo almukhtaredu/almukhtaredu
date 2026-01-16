@@ -33,29 +33,33 @@
 
         .ict-title span {
             color: var(--ict-purple);
-            text-shadow: 0 0 40px rgba(123, 67, 151, 1);
+            text-shadow: 0 0 30px rgba(123, 67, 151, 0.8);
             -webkit-text-stroke: 0px;
         }
 
         .grade-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px; margin-top: 60px; padding-bottom: 100px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px; margin-top: 50px; padding-bottom: 100px;
         }
 
         .grade-card {
-            background: rgba(0, 0, 0, 0.9);
-            border: 2px solid var(--ict-purple);
-            padding: 50px 30px; transition: 0.4s;
-            cursor: pointer; text-decoration: none; color: #fff;
+            background: rgba(0, 0, 0, 0.8);
+            border: 1px solid rgba(123, 67, 151, 0.3);
+            padding: 40px 30px; transition: 0.4s;
+            cursor: pointer; text-decoration: none; color: white;
+            position: relative; overflow: hidden;
+            display: block;
         }
 
         .grade-card:hover {
-            box-shadow: 0 0 30px rgba(123, 67, 151, 0.5);
+            border-color: var(--ict-purple);
+            box-shadow: 0 0 20px rgba(123, 67, 151, 0.5);
             transform: scale(1.05);
         }
 
         .grade-card h3 { font-family: 'Syncopate'; font-size: 1.8rem; }
+        .grade-card p { letter-spacing: 2px; font-size: 0.8rem; opacity: 0.7; }
     </style>
 </head>
 <body class="inner-page-padding">
@@ -74,13 +78,34 @@
 
     <div class="wrapper" style="max-width: 1200px; margin: 0 auto;">
         <h1 class="giant-title ict-title">ICT<br><span>REALM</span></h1>
+        
         <div class="grade-grid">
-            <a href="#" class="grade-card"><h3>PRIMARY 4</h3></a>
-            <a href="#" class="grade-card"><h3>PRIMARY 5</h3></a>
-            <a href="#" class="grade-card"><h3>PRIMARY 6</h3></a>
-            <a href="#" class="grade-card"><h3>PREP 1</h3></a>
-            <a href="#" class="grade-card"><h3>PREP 2</h3></a>
+            <a href="ict-p4.html" class="grade-card">
+                <h3>PRIMARY 4</h3>
+                <p>Digital Excellence.</p>
+            </a>
+
+            <div class="grade-card" style="opacity: 0.5; cursor: default;">
+                <h3>PRIMARY 5</h3>
+                <p>Coming Soon.</p>
+            </div>
+
+            <div class="grade-card" style="opacity: 0.5; cursor: default;">
+                <h3>PRIMARY 6</h3>
+                <p>Coming Soon.</p>
+            </div>
+
+            <div class="grade-card" style="opacity: 0.5; cursor: default;">
+                <h3>PREP 1</h3>
+                <p>Coming Soon.</p>
+            </div>
+
+            <div class="grade-card" style="opacity: 0.5; cursor: default;">
+                <h3>PREP 2</h3>
+                <p>Coming Soon.</p>
+            </div>
         </div>
     </div>
+
 </body>
 </html>
