@@ -21,32 +21,34 @@
         }
         .term-card {
             background: rgba(0,0,0,0.8);
-            border: 2px solid #333;
+            border: 2px solid #222;
             padding: 60px 40px;
             text-align: center;
             text-decoration: none;
             color: white;
             transition: 0.4s;
             position: relative;
-            overflow: hidden;
-            
-            /* مغلق حالياً */
-            opacity: 0.5;
+            opacity: 0.6;
             cursor: default;
             pointer-events: none;
         }
-
         .term-card h2 {
             font-family: 'Syncopate';
             font-size: 2.5rem;
-            margin-bottom: 10px;
-            color: #fff;
+            margin-bottom: 15px;
         }
-        .term-card p {
-            font-size: 0.9rem;
+        .status-badge {
+            display: inline-block;
+            color: #ffd700; /* لون أصفر ذهبي */
+            font-size: 0.8rem;
             letter-spacing: 2px;
-            color: var(--math-blue);
-            text-transform: uppercase;
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+        }
+        .lock-icon {
+            font-size: 1.5rem;
+            display: block;
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -61,15 +63,16 @@
         <h1 class="giant-title">PREP 1<br><span style="color:var(--math-blue)">SELECT TERM</span></h1>
         
         <div class="selection-grid">
-            <a href="#" class="term-card">
+            <div class="term-card">
+                <span class="lock-icon">🔒</span>
                 <h2>TERM 1</h2>
-                <p>COMING SOON</p>
-            </a>
-
-            <a href="#" class="term-card">
+                <span class="status-badge">COMING SOON</span>
+            </div>
+            <div class="term-card">
+                <span class="lock-icon">🔒</span>
                 <h2>TERM 2</h2>
-                <p>COMING SOON</p>
-            </a>
+                <span class="status-badge">COMING SOON</span>
+            </div>
         </div>
     </div>
 
