@@ -3,127 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prep 1 - Term 1 | Almukhtar Edu</title>
+    <title>Prep 1 Selection | Almukhtar Edu</title>
     <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
         body {
-            background-color: #050505;
+            background-color: #000814;
+            background-image: linear-gradient(rgba(79, 172, 254, 0.1) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(79, 172, 254, 0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
         }
-        /* تصميم عناوين الوحدات */
-        .unit-section { margin-bottom: 60px; }
-        .unit-header {
-            font-family: 'Syncopate';
-            color: var(--math-blue);
-            font-size: 1.5rem;
-            border-bottom: 1px solid rgba(79, 172, 254, 0.3);
-            padding-bottom: 15px;
-            margin-bottom: 25px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        .selection-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
         }
-        
-        /* تصميم قائمة الدروس */
-        .lesson-list { display: grid; gap: 15px; }
-        .lesson-item {
-            background: rgba(255, 255, 255, 0.03);
-            padding: 20px;
-            border-left: 3px solid #333;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: 0.3s;
-        }
-        .lesson-item:hover {
-            background: rgba(79, 172, 254, 0.05);
-            border-left-color: var(--math-blue);
-        }
-        .lesson-info h4 { font-size: 1.1rem; margin-bottom: 5px; color: #fff; }
-        .lesson-info p { font-size: 0.8rem; color: #888; }
-        
-        .action-btn {
+        .term-card {
+            background: rgba(0,0,0,0.8);
+            border: 2px solid #333;
+            padding: 60px 40px;
+            text-align: center;
             text-decoration: none;
-            color: var(--math-blue);
-            font-size: 0.7rem;
-            border: 1px solid var(--math-blue);
-            padding: 8px 15px;
-            transition: 0.3s;
-            white-space: nowrap;
+            color: white;
+            transition: 0.4s;
+            position: relative;
+            overflow: hidden;
+            
+            /* الإعدادات الافتراضية للكارت المغلق */
+            opacity: 0.5;
+            cursor: default;
+            pointer-events: none; /* يمنع الضغط نهائياً */
         }
-        .action-btn:hover { background: var(--math-blue); color: #000; }
+        
+        /* تأثير بسيط عند الوقوف على الكارت المغلق (اختياري) */
+        .term-card:hover {
+            border-color: #555;
+        }
+
+        .term-card h2 {
+            font-family: 'Syncopate';
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        .term-card p {
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            color: var(--math-blue);
+            text-transform: uppercase;
+        }
     </style>
 </head>
 <body class="inner-page-padding">
 
     <div class="side-logo-top"><img src="logo.png" alt="Logo"></div>
     <nav style="position:fixed; top:30px; left:40px; z-index:1000;">
-        <a href="math-p1.html" class="corner-link">BACK</a>
+        <a href="math.html" class="corner-link">BACK TO REALM</a>
     </nav>
 
     <div class="wrapper" style="max-width: 1000px; margin: 0 auto;">
-        <h1 class="giant-title">PREP 1<br><span style="color:var(--math-blue)">FIRST TERM</span></h1>
+        <h1 class="giant-title">PREP 1<br><span style="color:var(--math-blue)">SELECT TERM</span></h1>
+        
+        <div class="selection-grid">
+            
+            <a href="#" class="term-card">
+                <h2>TERM 1</h2>
+                <p>COMING SOON</p>
+            </a>
 
-        <div class="unit-section">
-            <div class="unit-header">
-                <span>UNIT 1: NUMBERS & ALGEBRA</span>
-                <span style="font-size:0.8rem; opacity:0.6;">MODULE A</span>
-            </div>
-            <div class="lesson-list">
-                <div class="lesson-item">
-                    <div class="lesson-info">
-                        <h4>Set of Rational Numbers</h4>
-                        <p>Understanding Q, forms of numbers, and representation.</p>
-                    </div>
-                    <a href="#" class="action-btn">VIEW CLASS</a>
-                </div>
-                <div class="lesson-item">
-                    <div class="lesson-info">
-                        <h4>Comparing & Ordering</h4>
-                        <p>Density of rational numbers and comparison logic.</p>
-                    </div>
-                    <a href="#" class="action-btn">VIEW CLASS</a>
-                </div>
-                <div class="lesson-item">
-                    <div class="lesson-info">
-                        <h4>Algebraic Terms</h4>
-                        <p>Degrees, coefficients, and adding/subtracting terms.</p>
-                    </div>
-                    <a href="#" class="action-btn">VIEW CLASS</a>
-                </div>
-            </div>
+            <a href="#" class="term-card">
+                <h2>TERM 2</h2>
+                <p>COMING SOON</p>
+            </a>
+
         </div>
-
-        <div class="unit-section">
-            <div class="unit-header">
-                <span>UNIT 2: GEOMETRY</span>
-                <span style="font-size:0.8rem; opacity:0.6;">MODULE B</span>
-            </div>
-            <div class="lesson-list">
-                <div class="lesson-item">
-                    <div class="lesson-info">
-                        <h4>Geometric Concepts</h4>
-                        <p>Lines, rays, angles, and their types.</p>
-                    </div>
-                    <a href="#" class="action-btn">VIEW CLASS</a>
-                </div>
-                <div class="lesson-item">
-                    <div class="lesson-info">
-                        <h4>Congruence (The 4 Cases)</h4>
-                        <p>Identical triangles and proving congruence logic.</p>
-                    </div>
-                    <a href="#" class="action-btn">VIEW CLASS</a>
-                </div>
-                <div class="lesson-item">
-                    <div class="lesson-info">
-                        <h4>Parallelism</h4>
-                        <p>Alternate, corresponding, and interior angles.</p>
-                    </div>
-                    <a href="#" class="action-btn">VIEW CLASS</a>
-                </div>
-            </div>
-        </div>
-
     </div>
 
 </body>
