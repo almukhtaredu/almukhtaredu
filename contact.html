@@ -40,10 +40,12 @@
             </div>
 
             <div class="form-side">
-                <form class="cyber-form">
-                    <input type="text" placeholder="NAME / IDENTIFIER" required>
-                    <input type="text" placeholder="PHONE / COORDINATES" required>
-                    <textarea placeholder="YOUR MESSAGE TRANSMISSION" rows="5"></textarea>
+                <form action="https://formspree.io/f/mwvvvppg" method="POST" class="cyber-form">
+                    <input type="text" name="name" placeholder="NAME / IDENTIFIER" required>
+                    <input type="email" name="email" placeholder="EMAIL ADDRESS" required>
+                    <input type="text" name="phone" placeholder="PHONE / COORDINATES" required>
+                    <textarea name="message" placeholder="YOUR MESSAGE TRANSMISSION" rows="5" required></textarea>
+                    
                     <button type="submit" class="glitch-btn">EXECUTE SEND</button>
                 </form>
             </div>
