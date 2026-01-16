@@ -9,35 +9,54 @@
     <style>
         body {
             background-color: #000814;
-            background-image: linear-gradient(rgba(79, 172, 254, 0.15) 1.5px, transparent 1.5px),
-                              linear-gradient(90deg, rgba(79, 172, 254, 0.15) 1.5px, transparent 1.5px);
-            background-size: 40px 40px;
+            background-image: linear-gradient(rgba(79, 172, 254, 0.1) 1.5px, transparent 1.5px),
+                              linear-gradient(90deg, rgba(79, 172, 254, 0.1) 1.5px, transparent 1.5px);
+            background-size: 50px 50px;
             overflow-x: hidden;
         }
+
         .math-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: -1; }
-        .symbol { position: absolute; color: var(--math-blue); font-family: 'Syncopate'; font-weight: bold; opacity: 0; animation: float-up 10s infinite linear; }
-        @keyframes float-up {
-            0% { transform: translateY(105vh) scale(0.5); opacity: 0; }
-            20% { opacity: 0.6; }
-            80% { opacity: 0.6; }
-            100% { transform: translateY(-10vh) scale(1.2); opacity: 0; }
+
+        .symbol {
+            position: absolute; color: var(--math-blue); font-family: 'Syncopate';
+            font-weight: bold; opacity: 0;
+            animation: float-up infinite linear;
         }
-        .math-title span { color: var(--math-blue); text-shadow: 0 0 40px rgba(79, 172, 254, 1); -webkit-text-stroke: 0px; }
+
+        @keyframes float-up {
+            0% { transform: translateY(110vh) rotate(0deg) scale(0.5); opacity: 0; }
+            20% { opacity: 0.4; }
+            80% { opacity: 0.4; }
+            100% { transform: translateY(-20vh) rotate(360deg) scale(1.5); opacity: 0; }
+        }
+
+        .math-title span { color: var(--math-blue); text-shadow: 0 0 40px rgba(79, 172, 254, 1); }
         .grade-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-top: 60px; padding-bottom: 100px; }
-        .grade-card { background: rgba(0, 0, 0, 0.9); border: 2px solid var(--math-blue); padding: 50px 30px; transition: 0.4s; cursor: pointer; text-decoration: none; color: #fff; position: relative; display: block; }
+        .grade-card { background: rgba(0, 0, 0, 0.9); border: 2px solid var(--math-blue); padding: 50px 30px; transition: 0.4s; text-decoration: none; color: #fff; display: block; }
         .grade-card:hover { box-shadow: 0 0 30px rgba(79, 172, 254, 0.4); transform: translateY(-10px); }
-        .grade-card h3 { font-family: 'Syncopate'; font-size: 2.2rem; margin-bottom: 10px; }
+        .grade-card h3 { font-family: 'Syncopate'; font-size: 2.2rem; }
     </style>
 </head>
 <body class="inner-page-padding">
     <div class="math-overlay">
-        <div class="symbol" style="left: 5%; animation-delay: 0s;">∑</div>
-        <div class="symbol" style="left: 25%; animation-delay: 2s;">π</div>
-        <div class="symbol" style="left: 60%; animation-delay: 1s;">∫</div>
-        <div class="symbol" style="left: 85%; animation-delay: 4s;">√</div>
+        <div class="symbol" style="left: 5%; font-size: 3rem; animation-duration: 8s;">∑</div>
+        <div class="symbol" style="left: 15%; font-size: 1.5rem; animation-duration: 12s; animation-delay: 2s;">√</div>
+        <div class="symbol" style="left: 25%; font-size: 4rem; animation-duration: 10s; animation-delay: 5s;">π</div>
+        <div class="symbol" style="left: 35%; font-size: 2rem; animation-duration: 15s;">∞</div>
+        <div class="symbol" style="left: 45%; font-size: 3.5rem; animation-duration: 7s; animation-delay: 1s;">∫</div>
+        <div class="symbol" style="left: 55%; font-size: 2.5rem; animation-duration: 11s;">Δ</div>
+        <div class="symbol" style="left: 65%; font-size: 4.5rem; animation-duration: 9s; animation-delay: 3s;">θ</div>
+        <div class="symbol" style="left: 75%; font-size: 1.8rem; animation-duration: 14s;">≠</div>
+        <div class="symbol" style="left: 85%; font-size: 3rem; animation-duration: 10s; animation-delay: 6s;">±</div>
+        <div class="symbol" style="left: 95%; font-size: 2.2rem; animation-duration: 13s;">≈</div>
+        <div class="symbol" style="left: 12%; font-size: 2.5rem; animation-duration: 16s; animation-delay: 4s;">log</div>
+        <div class="symbol" style="left: 50%; font-size: 3rem; animation-duration: 8s; animation-delay: 7s;">Ω</div>
+        <div class="symbol" style="left: 80%; font-size: 2rem; animation-duration: 12s; animation-delay: 1s;">sin</div>
     </div>
+
     <div class="side-logo-top"><img src="logo.png" alt="Logo"></div>
     <nav style="position:fixed; top:30px; left:40px; z-index:1000;"><a href="index.html" class="corner-link">BACK</a></nav>
+
     <div class="wrapper" style="max-width: 1200px; margin: 0 auto;">
         <h1 class="giant-title math-title">MATH<br><span>REALM</span></h1>
         <div class="grade-grid">
