@@ -40,11 +40,15 @@
             </div>
 
             <div class="form-side">
-                <form action="https://formspree.io/f/mwvvvppg" method="POST" class="cyber-form">
-                    <input type="text" name="name" placeholder="NAME / IDENTIFIER" required>
-                    <input type="email" name="email" placeholder="EMAIL ADDRESS" required>
-                    <input type="text" name="phone" placeholder="PHONE / COORDINATES" required>
-                    <textarea name="message" placeholder="YOUR MESSAGE TRANSMISSION" rows="5" required></textarea>
+                <form action="https://formspree.io/f/mwvvvppg" method="POST" class="cyber-form" autocomplete="off">
+                    
+                    <input type="text" name="name" placeholder="YOUR FULL NAME" required autocomplete="off">
+                    
+                    <input type="email" name="email" placeholder="YOUR EMAIL ADDRESS" required autocomplete="off">
+                    
+                    <input type="text" name="phone" placeholder="YOUR PHONE NUMBER" required autocomplete="off">
+                    
+                    <textarea name="message" placeholder="WRITE YOUR MESSAGE HERE..." rows="5" required></textarea>
                     
                     <button type="submit" class="glitch-btn">EXECUTE SEND</button>
                 </form>
