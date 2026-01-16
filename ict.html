@@ -7,105 +7,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-        body {
-            background-color: #080010;
-            overflow-x: hidden;
-        }
-
-        /* تأثير مطر الأكواد Matrix Style */
-        .cyber-rain {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            pointer-events: none; z-index: -1;
-        }
-
-        .code-line {
-            position: absolute; color: var(--ict-purple); font-family: monospace;
-            font-size: 1.5rem; font-weight: bold; opacity: 0;
-            animation: matrix-fall 5s infinite linear;
-        }
-
-        @keyframes matrix-fall {
-            0% { transform: translateY(-20vh); opacity: 0; }
-            20% { opacity: 1; }
-            80% { opacity: 1; }
-            100% { transform: translateY(110vh); opacity: 0; }
-        }
-
-        .ict-title span {
-            color: var(--ict-purple);
-            text-shadow: 0 0 30px rgba(123, 67, 151, 0.8);
-            -webkit-text-stroke: 0px;
-        }
-
-        .grade-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px; margin-top: 50px; padding-bottom: 100px;
-        }
-
-        .grade-card {
-            background: rgba(0, 0, 0, 0.8);
-            border: 1px solid rgba(123, 67, 151, 0.3);
-            padding: 40px 30px; transition: 0.4s;
-            cursor: pointer; text-decoration: none; color: white;
-            position: relative; overflow: hidden;
-            display: block;
-        }
-
-        .grade-card:hover {
-            border-color: var(--ict-purple);
-            box-shadow: 0 0 20px rgba(123, 67, 151, 0.5);
-            transform: scale(1.05);
-        }
-
+        body { background-color: #080010; overflow-x: hidden; }
+        .cyber-rain { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: -1; }
+        .code-line { position: absolute; color: var(--ict-purple); font-family: monospace; font-size: 1.5rem; font-weight: bold; opacity: 0; animation: matrix-fall 5s infinite linear; }
+        @keyframes matrix-fall { 0% { transform: translateY(-20vh); opacity: 0; } 20% { opacity: 1; } 100% { transform: translateY(110vh); opacity: 0; } }
+        .ict-title span { color: var(--ict-purple); text-shadow: 0 0 30px rgba(123, 67, 151, 0.8); -webkit-text-stroke: 0px; }
+        .grade-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 50px; padding-bottom: 100px; }
+        .grade-card { background: rgba(0, 0, 0, 0.8); border: 1px solid rgba(123, 67, 151, 0.3); padding: 40px 30px; transition: 0.4s; text-decoration: none; color: white; display: block; }
+        .grade-card:hover { border-color: var(--ict-purple); box-shadow: 0 0 20px rgba(123, 67, 151, 0.5); transform: scale(1.05); }
         .grade-card h3 { font-family: 'Syncopate'; font-size: 1.8rem; }
-        .grade-card p { letter-spacing: 2px; font-size: 0.8rem; opacity: 0.7; }
     </style>
 </head>
 <body class="inner-page-padding">
-
     <div class="cyber-rain">
-        <div class="code-line" style="left: 10%; animation-delay: 0s;">10110</div>
-        <div class="code-line" style="left: 25%; animation-delay: 2s;">&lt;HTML&gt;</div>
-        <div class="code-line" style="left: 45%; animation-delay: 1s;">{ JSON }</div>
-        <div class="code-line" style="left: 65%; animation-delay: 3s;">00101</div>
-        <div class="code-line" style="left: 85%; animation-delay: 0.5s;">SCRIPTS</div>
-        <div class="code-line" style="left: 95%; animation-delay: 4s;">BINARY</div>
+        <div class="code-line" style="left: 10%;">10110</div>
+        <div class="code-line" style="left: 45%;">{ JSON }</div>
+        <div class="code-line" style="left: 85%;">SCRIPTS</div>
     </div>
-
     <div class="side-logo-top"><img src="logo.png" alt="Logo"></div>
     <nav style="position:fixed; top:30px; left:40px; z-index:1000;"><a href="index.html" class="corner-link">BACK</a></nav>
-
     <div class="wrapper" style="max-width: 1200px; margin: 0 auto;">
         <h1 class="giant-title ict-title">ICT<br><span>REALM</span></h1>
-        
         <div class="grade-grid">
-            <a href="ict-p4.html" class="grade-card">
-                <h3>PRIMARY 4</h3>
-                <p>Digital Excellence.</p>
-            </a>
-
-            <div class="grade-card" style="opacity: 0.5; cursor: default;">
-                <h3>PRIMARY 5</h3>
-                <p>Coming Soon.</p>
-            </div>
-
-            <div class="grade-card" style="opacity: 0.5; cursor: default;">
-                <h3>PRIMARY 6</h3>
-                <p>Coming Soon.</p>
-            </div>
-
-            <div class="grade-card" style="opacity: 0.5; cursor: default;">
-                <h3>PREP 1</h3>
-                <p>Coming Soon.</p>
-            </div>
-
-            <div class="grade-card" style="opacity: 0.5; cursor: default;">
-                <h3>PREP 2</h3>
-                <p>Coming Soon.</p>
-            </div>
+            <a href="ict-p4.html" class="grade-card"><h3>PRIMARY 4</h3><p>Digital Excellence.</p></a>
+            <a href="ict-p5.html" class="grade-card"><h3>PRIMARY 5</h3><p>Cyber Skills.</p></a>
+            <a href="ict-p6.html" class="grade-card"><h3>PRIMARY 6</h3><p>Future Tech.</p></a>
+            <a href="ict-prep1.html" class="grade-card"><h3>PREP 1</h3><p>Code Logic.</p></a>
+            <a href="ict-prep2.html" class="grade-card"><h3>PREP 2</h3><p>System Design.</p></a>
         </div>
     </div>
-
 </body>
 </html>
